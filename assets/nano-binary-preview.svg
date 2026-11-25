@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset="1" stop-color="#172a42"/></linearGradient>
+  <pattern id="millionDots" width=".54" height=".54" patternUnits="userSpaceOnUse">
+    <circle cx=".27" cy=".27" r=".16" fill="#f2ca70"/>
+  </pattern>
+  <style>
+    .title{font:700 42px Arial,sans-serif;fill:#fff}
+    .head{font:700 28px Arial,sans-serif;fill:#ffe39a}
+    .body{font:21px Arial,sans-serif;fill:#d0d9e5}
+    .small{font:17px Arial,sans-serif;fill:#aebed0}
+  </style>
+</defs>
+<rect width="1600" height="1050" fill="url(#bg)"/>
+<text x="800" y="72" text-anchor="middle" class="title">NANO-BINARY — MILLION DOTS / ONE DOT</text>
+<text x="800" y="118" text-anchor="middle" class="body">Two representations shown side by side</text>
+
+<rect x="55" y="165" width="720" height="700" rx="24" fill="#0d1a2b" stroke="#c69d4b" stroke-width="2"/>
+<rect x="825" y="165" width="720" height="700" rx="24" fill="#0d1a2b" stroke="#c69d4b" stroke-width="2"/>
+
+<text x="415" y="225" text-anchor="middle" class="head">IMAGE 1 — ORIGINAL GRID</text>
+<text x="1185" y="225" text-anchor="middle" class="head">IMAGE 2 — SINGLE DOT</text>
+
+<!-- Exactly 1,000 pattern rows and 1,000 dots per row across the square -->
+<rect x="145" y="285" width="540" height="540" fill="url(#millionDots)"/>
+<rect x="145" y="285" width="540" height="540" fill="none" stroke="#f2ca70" stroke-width="2"/>
+
+<circle cx="1185" cy="555" r="7" fill="#ffe39a"/>
+<circle cx="1185" cy="555" r="18" fill="none" stroke="#ffe39a" stroke-width="1.5" opacity=".55"/>
+
+<text x="415" y="900" text-anchor="middle" class="head">1,000 rows × 1,000 dots</text>
+<text x="415" y="935" text-anchor="middle" class="body">1,000,000 dots in total</text>
+<text x="1185" y="900" text-anchor="middle" class="head">1 dot</text>
+<text x="1185" y="935" text-anchor="middle" class="body">Single-dot representation</text>
+
+<rect x="55" y="970" width="1490" height="55" rx="12" fill="#17283d" stroke="#60748c"/>
+<text x="800" y="1005" text-anchor="middle" class="small">Concept illustration of the proposed comparison; the single dot is a representation, not proof that the million data points are physically preserved by uniform scaling.</text>
+</svg>

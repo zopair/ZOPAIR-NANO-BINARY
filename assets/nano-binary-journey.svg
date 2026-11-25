@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">NANO-BINARY concept journey: seven explanatory stages</title>
+<desc id="desc">A conceptual sequence from an image to its ordered binary stream, a continuous indexed path, a uniformly scaled geometric path, a single composite physical object, and exact reconstruction. Physical feasibility remains unproven.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090b10"/><stop offset="1" stop-color="#171b25"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#e4b85b"/><stop offset="1" stop-color="#fff0b0"/></linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6Z" fill="#e4b85b"/></marker>
+  <style>
+    .panel{fill:#111722;stroke:#394252;stroke-width:2}.head{font:700 25px Arial,sans-serif;fill:#f5f6f8}.sub{font:17px Arial,sans-serif;fill:#bac3d0}.small{font:14px Arial,sans-serif;fill:#aab4c2}.bit{font:700 20px monospace;fill:#fff}.gold{stroke:#e4b85b;fill:none;stroke-width:4}.node{fill:#e4b85b;stroke:#fff0b0;stroke-width:1}.zero{fill:#273244;stroke:#aeb9c9;stroke-width:1.5}.one{fill:#e4b85b;stroke:#fff0b0;stroke-width:1.5}.arrow{stroke:#e4b85b;stroke-width:3;fill:none;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1600" height="1120" fill="url(#bg)"/>
+<text x="70" y="65" class="head" font-size="36">ZOPAIR NANO-BINARY</text>
+<text x="70" y="98" class="sub">A visual explanation of the hypothesis — preserve the sequence, investigate the physical scale</text>
+<rect x="70" y="125" width="1460" height="2" fill="#394252"/>
+
+<!-- Stage 1 -->
+<rect class="panel" x="70" y="165" width="450" height="330" rx="18"/>
+<circle cx="105" cy="205" r="20" class="node"/><text x="99" y="212" class="bit" fill="#111">1</text>
+<text x="140" y="213" class="head">Original image</text>
+<text x="100" y="246" class="sub">A fixed image is the source data.</text>
+<g transform="translate(150 275)">
+  <rect width="240" height="160" rx="8" fill="#202b3a" stroke="#d5dce6" stroke-width="2"/>
+  <g fill="#e4b85b">
+    <rect x="10" y="10" width="27" height="27"/><rect x="37" y="10" width="27" height="27"/><rect x="64" y="10" width="27" height="27"/>
+    <rect x="91" y="37" width="27" height="27"/><rect x="118" y="37" width="27" height="27"/><rect x="145" y="64" width="27" height="27"/>
+    <rect x="172" y="64" width="27" height="27"/><rect x="199" y="91" width="27" height="27"/>
+    <rect x="64" y="91" width="27" height="27"/><rect x="91" y="118" width="27" height="27"/><rect x="118" y="118" width="27" height="27"/>
+  </g>
+  <g fill="#aab4c2"><rect x="37" y="64" width="27" height="27"/><rect x="64" y="64" width="27" height="27"/><rect x="145" y="118" width="27" height="27"/></g>
+</g>
+<text x="100" y="466" class="small">Illustrative pixel pattern, not a specific image format.</text>
+
+<!-- Stage 2 -->
+<rect class="panel" x="575" y="165" width="450" height="330" rx="18"/>
+<circle cx="610" cy="205" r="20" class="node"/><text x="604" y="212" class="bit" fill="#111">2</text>
+<text x="645" y="213" class="head">Exact binary sequence</text>
+<text x="605" y="246" class="sub">Every bit keeps its value and index.</text>
+<g transform="translate(615 285)">
+  <g><rect class="zero" x="0" y="0" width="42" height="48" rx="6"/><text class="bit" x="14" y="31">0</text>
+  <rect class="one" x="49" y="0" width="42" height="48" rx="6"/><text class="bit" x="63" y="31" fill="#111">1</text>
+  <rect class="one" x="98" y="0" width="42" height="48" rx="6"/><text class="bit" x="112" y="31" fill="#111">1</text>
+  <rect class="zero" x="147" y="0" width="42" height="48" rx="6"/><text class="bit" x="161" y="31">0</text>
+  <rect class="one" x="196" y="0" width="42" height="48" rx="6"/><text class="bit" x="210" y="31" fill="#111">1</text>
+  <rect class="zero" x="245" y="0" width="42" height="48" rx="6"/><text class="bit" x="259" y="31">0</text>
+  <rect class="zero" x="294" y="0" width="42" height="48" rx="6"/><text class="bit" x="308" y="31">0</text></g>
+  <g class="small" text-anchor="middle"><text x="21" y="73">0</text><text x="70" y="73">1</text><text x="119" y="73">2</text><text x="168" y="73">3</text><text x="217" y="73">4</text><text x="266" y="73">5</text><text x="315" y="73">6</text></g>
+  <path d="M0 92 H336" class="gold"/><text x="168" y="119" text-anchor="middle" class="small">index order →</text>
+</g>
+<text x="605" y="466" class="small">No bit is deleted, swapped, merged, or reinterpreted.</text>
+
+<!-- Stage 3 -->
+<rect class="panel" x="1080" y="165" width="450" height="330" rx="18"/>
+<circle cx="1115" cy="205" r="20" class="node"/><text x="1109" y="212" class="bit" fill="#111">3</text>
+<text x="1150" y="213" class="head">Continuous ordered path</text>
+<text x="1110" y="246" class="sub">Each indexed bit occupies its place.</text>
+<path d="M1135 330 C1190 270 1240 390 1295 330 S1400 270 1475 330" class="gold"/>
+<g>
+  <circle cx="1135" cy="330" r="12" class="zero"/><circle cx="1190" cy="300" r="12" class="one"/><circle cx="1245" cy="330" r="12" class="one"/><circle cx="1300" cy="330" r="12" class="zero"/><circle cx="1355" cy="300" r="12" class="one"/><circle cx="1410" cy="300" r="12" class="zero"/><circle cx="1475" cy="330" r="12" class="zero"/>
+</g>
+<text x="1130" y="390" class="small">START</text><text x="1435" y="390" class="small">END</text>
+<text x="1110" y="466" class="small">The path is a geometry for the same ordered stream.</text>
+
+<!-- Stage 4 -->
+<rect class="panel" x="70" y="535" width="450" height="330" rx="18"/>
+<circle cx="105" cy="575" r="20" class="node"/><text x="99" y="582" class="bit" fill="#111">4</text>
+<text x="140" y="583" class="head">Uniform geometric scaling</text>
+<text x="100" y="616" class="sub">All dimensions scale together.</text>
+<g transform="translate(125 660)">
+  <path d="M0 30 C30 -20 60 80 90 30 S150 -20 180 30" stroke="#9aa6b7" stroke-width="5" fill="none"/>
+  <circle cx="0" cy="30" r="8" fill="#9aa6b7"/><circle cx="45" cy="30" r="8" fill="#9aa6b7"/><circle cx="90" cy="30" r="8" fill="#9aa6b7"/><circle cx="135" cy="30" r="8" fill="#9aa6b7"/><circle cx="180" cy="30" r="8" fill="#9aa6b7"/>
+  <path d="M215 30 H260" class="arrow"/>
+  <path d="M285 30 C300 5 315 55 330 30 S360 5 375 30" stroke="#e4b85b" stroke-width="2" fill="none"/>
+  <g fill="#e4b85b"><circle cx="285" cy="30" r="4"/><circle cx="307" cy="30" r="4"/><circle cx="330" cy="30" r="4"/><circle cx="352" cy="30" r="4"/><circle cx="375" cy="30" r="4"/></g>
+</g>
+<text x="125" y="745" class="small">Before</text><text x="410" y="745" class="small">After</text>
+<text x="100" y="795" class="head" font-size="20">x′ = s · x</text>
+<text x="100" y="828" class="small">Illustration only: smaller coordinates do not prove</text>
+<text x="100" y="848" class="small">that a material can resolve the smaller features.</text>
+
+<!-- Stage 5 -->
+<rect class="panel" x="575" y="535" width="450" height="330" rx="18"/>
+<circle cx="610" cy="575" r="20" class="node"/><text x="604" y="582" class="bit" fill="#111">5</text>
+<text x="645" y="583" class="head">One composite object</text>
+<text x="605" y="616" class="sub">The whole sequence remains inside.</text>
+<g transform="translate(675 650)">
+  <ellipse cx="125" cy="70" rx="115" ry="54" fill="#202b3a" stroke="#e4b85b" stroke-width="3"/>
+  <path d="M25 70 C55 5 85 135 115 70 S175 5 205 70 S265 135 285 70" stroke="#e4b85b" stroke-width="4" fill="none"/>
+  <g fill="#fff0b0"><circle cx="25" cy="70" r="5"/><circle cx="55" cy="40" r="5"/><circle cx="85" cy="100" r="5"/><circle cx="115" cy="70" r="5"/><circle cx="145" cy="40" r="5"/><circle cx="175" cy="100" r="5"/><circle cx="205" cy="70" r="5"/></g>
+</g>
+<text x="605" y="795" class="small">Conceptual enclosure / form factor, not a proposed</text>
+<text x="605" y="818" class="small">material or a claim that the bits become one bit.</text>
+
+<!-- Stage 6 -->
+<rect class="panel" x="1080" y="535" width="450" height="330" rx="18"/>
+<circle cx="1115" cy="575" r="20" class="node"/><text x="1109" y="582" class="bit" fill="#111">6</text>
+<text x="1150" y="583" class="head">Read and reconstruct</text>
+<text x="1110" y="616" class="sub">Read in the original index order.</text>
+<g transform="translate(1135 665)">
+  <path d="M0 35 H115" class="gold"/><path d="M115 35 H170" class="arrow"/>
+  <rect x="190" y="-10" width="120" height="90" rx="8" fill="#202b3a" stroke="#e4b85b" stroke-width="2"/>
+  <g fill="#e4b85b"><rect x="202" y="2" width="20" height="20"/><rect x="222" y="2" width="20" height="20"/><rect x="242" y="22" width="20" height="20"/><rect x="262" y="42" width="20" height="20"/></g>
+  <text x="250" y="108" class="small" text-anchor="middle">same image</text>
+</g>
+<text x="1110" y="795" class="head" font-size="20">D(T(B)) = B</text>
+<text x="1110" y="828" class="small">Exact software invariant; physical readout remains unproven.</text>
+
+<rect x="70" y="900" width="1460" height="150" rx="16" fill="#201b12" stroke="#9a7838" stroke-width="2"/>
+<text x="105" y="945" class="head" fill="#fff0b0">7 · Physical proof still required</text>
+<text x="105" y="980" class="sub">State distinguishability • minimum feature size • fabrication tolerance • interference • read/write method • retention • error rate</text>
+<text x="105" y="1015" class="sub">A successful geometric simulation is not evidence of a fabricated nanoscale storage medium or a measured density gain.</text>
+</svg>
