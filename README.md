@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/6cde920c-a64c-4eee-b387-ea179320b5f1
+
 # ZOPAIR NANO-BINARY
 
 [![Research status](https://img.shields.io/badge/status-research%20prototype-blue)](docs/RESEARCH_HYPOTHESIS.md)
