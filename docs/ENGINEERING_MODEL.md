@@ -17,6 +17,8 @@ where r is the nominal radius, p is the nominal axial pitch, and s is a positive
 
 The bit value remains attached to its original index. The helix is only one possible path geometry; it is not a claim that a real device can resolve the modeled points.
 
+**Software vs. concept.** In the current code, the 0/1 distinction is carried by the indexed value field, not by the coordinates; the decoder reads stored values and indices, not shape. The author's concept describes the values as symbol shapes (0 as 0, 1 as 1) with inter-symbol spaces, all scaled by one common factor and routed as a thread whose outer contour is the numeral 1. Embodying values as readable physical shapes is a Stage 2 question (physical state definition) and is neither implemented nor claimed by the prototype.
+
 ## What scaling means
 
 All coordinates are multiplied by the same positive factor s. This preserves the mathematical shape and index ordering. It does not prove that the corresponding physical states remain separable at that scale.
