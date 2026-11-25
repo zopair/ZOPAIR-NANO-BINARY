@@ -33,7 +33,7 @@ def write_binary_grid(
 
     pitch = cell_px + gap_px
     width, height = columns * pitch, rows * pitch
-    white = bytes([255]) * width
+    separator = bytes([127]) * width
     black_cell = bytes([0]) * cell_px
     white_cell = bytes([255]) * cell_px
 
@@ -46,11 +46,11 @@ def write_binary_grid(
                 start = column * pitch
                 cell_row[start:start + cell_px] = black_cell if bit == "0" else white_cell
                 if gap_px:
-                    cell_row[start + cell_px:start + pitch] = bytes([255]) * gap_px
+                    cell_row[start + cell_px:start + pitch] = bytes([127]) * gap_px
             for _ in range(cell_px):
                 stream.write(cell_row)
             for _ in range(gap_px):
-                stream.write(white)
+                stream.write(separator)
     return width, height
 
 
