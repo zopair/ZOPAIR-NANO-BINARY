@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+<title id="title">From a binary field to a one-shaped binary thread</title>
+<desc id="desc">Left: an ordered field of zeros and ones. Right: a continuous thread made from the same ordered zero and one values, routed into the shape of the numeral one. The numeral is a shape, not a replacement bit.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07090e"/><stop offset="1" stop-color="#171d29"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c99537"/><stop offset=".5" stop-color="#ffe5a0"/><stop offset="1" stop-color="#d5a64a"/></linearGradient>
+  <pattern id="binaryTexture" width="118" height="76" patternUnits="userSpaceOnUse">
+    <text x="5" y="27" fill="#8793a5" opacity=".45" font-family="monospace" font-size="25">0 1 1 0</text>
+    <text x="5" y="59" fill="#8793a5" opacity=".32" font-family="monospace" font-size="25">1 0 0 1</text>
+  </pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .title{font:700 38px Arial,sans-serif;fill:#f6f7fa}.label{font:700 25px Arial,sans-serif;fill:#f6f7fa}.copy{font:19px Arial,sans-serif;fill:#bac4d2}.tiny{font:15px Arial,sans-serif;fill:#9ca9bb}.bit{font:700 21px monospace;fill:#fff}.gold{fill:none;stroke:url(#gold);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}.node{fill:#0d1420;stroke:#f3cc75;stroke-width:2}.idx{font:13px monospace;fill:#cbd4df}
+  </style>
+</defs>
+<rect width="1800" height="900" fill="url(#bg)"/>
+<text x="80" y="76" class="title">SAME BITS · DIFFERENT GEOMETRY</text>
+<text x="80" y="113" class="copy">The values and their order remain unchanged; only the proposed physical path is reshaped.</text>
+
+<!-- left: binary field -->
+<rect x="75" y="165" width="690" height="570" rx="24" fill="#0d1420" stroke="#3b4658" stroke-width="2"/>
+<rect x="95" y="185" width="650" height="530" rx="15" fill="url(#binaryTexture)"/>
+<rect x="95" y="185" width="650" height="530" rx="15" fill="#0b111b" opacity=".38"/>
+<text x="125" y="235" class="label">01 · THE ORIGINAL BINARY FIELD</text>
+<text x="125" y="273" class="copy">A structured sequence of 0 and 1 — not random decoration.</text>
+<rect x="125" y="320" width="590" height="112" rx="12" fill="#111b2a" stroke="#68778c" stroke-width="1.5"/>
+<text x="150" y="365" class="bit">0 1 1 0 1 0 0 1  1 0 1 1 0 0 1 0</text>
+<text x="150" y="405" class="bit">1 0 0 1 0 1 1 0  0 1 0 0 1 1 0 1</text>
+<text x="125" y="490" class="copy">Each position has its own index and value.</text>
+<text x="125" y="530" class="tiny">Illustrative 32-bit sample · actual projects may contain millions of bits.</text>
+<path d="M130 590 H700" stroke="#d5a64a" stroke-width="2" opacity=".55"/>
+<text x="130" y="630" class="tiny">START → original order → END</text>
+<text x="130" y="670" class="tiny">No deletion · no merging · no reordering · no compression</text>
+
+<!-- transition arrow -->
+<path d="M790 450 H975" stroke="#e4b85b" stroke-width="5" fill="none"/>
+<path d="M955 430 L980 450 L955 470" stroke="#e4b85b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="885" y="415" text-anchor="middle" class="tiny">RE-SHAPE</text>
+
+<!-- right: numeral 1 made of one continuous thread -->
+<rect x="1015" y="165" width="710" height="570" rx="24" fill="#0d1420" stroke="#3b4658" stroke-width="2"/>
+<text x="1065" y="235" class="label">02 · THE SAME SEQUENCE AS A THREAD</text>
+<text x="1065" y="273" class="copy">One continuous route bends into the silhouette of “1”.</text>
+<!-- underlying path -->
+<path class="gold" filter="url(#glow)" d="M1195 390 C1230 390 1265 350 1300 315 L1380 250 L1380 620 C1380 650 1400 665 1435 665 L1555 665"/>
+<!-- numbered nodes along same route -->
+<g>
+<circle class="node" cx="1195" cy="390" r="18"/><text class="bit" x="1188" y="397">0</text>
+<circle class="node" cx="1230" cy="378" r="18"/><text class="bit" x="1223" y="385">1</text>
+<circle class="node" cx="1265" cy="350" r="18"/><text class="bit" x="1258" y="357">1</text>
+<circle class="node" cx="1300" cy="315" r="18"/><text class="bit" x="1293" y="322">0</text>
+<circle class="node" cx="1338" cy="285" r="18"/><text class="bit" x="1331" y="292">1</text>
+<circle class="node" cx="1380" cy="250" r="18"/><text class="bit" x="1373" y="257">0</text>
+<circle class="node" cx="1380" cy="300" r="18"/><text class="bit" x="1373" y="307">0</text>
+<circle class="node" cx="1380" cy="350" r="18"/><text class="bit" x="1373" y="357">1</text>
+<circle class="node" cx="1380" cy="400" r="18"/><text class="bit" x="1373" y="407">1</text>
+<circle class="node" cx="1380" cy="450" r="18"/><text class="bit" x="1373" y="457">0</text>
+<circle class="node" cx="1380" cy="500" r="18"/><text class="bit" x="1373" y="507">1</text>
+<circle class="node" cx="1380" cy="550" r="18"/><text class="bit" x="1373" y="557">0</text>
+<circle class="node" cx="1380" cy="620" r="18"/><text class="bit" x="1373" y="627">0</text>
+<circle class="node" cx="1400" cy="665" r="18"/><text class="bit" x="1393" y="672">1</text>
+<circle class="node" cx="1450" cy="665" r="18"/><text class="bit" x="1443" y="672">0</text>
+<circle class="node" cx="1500" cy="665" r="18"/><text class="bit" x="1493" y="672">1</text>
+</g>
+<text x="1090" y="705" class="tiny">START</text><text x="1558" y="705" class="tiny">CONTINUES →</text>
+
+<!-- explanation footer -->
+<rect x="75" y="770" width="1650" height="85" rx="16" fill="#211b10" stroke="#9a7838" stroke-width="2"/>
+<text x="110" y="805" class="label">IMPORTANT: “1” IS THE OUTER SHAPE — NOT THE DATA VALUE.</text>
+<text x="110" y="835" class="copy">The thread still contains the original 0s and 1s, in sequence. The numeral is a geometric form made by routing that same sequence.</text>
+</svg>
