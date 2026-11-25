@@ -3,10 +3,11 @@
 ## Stage 0 — software invariants (current)
 
 - [x] Define the original bit sequence as immutable ordered data.
+- [x] Convert bytes to bits and back without changing values or order.
 - [x] Model an indexed geometric path.
 - [x] Apply uniform coordinate scaling.
 - [x] Test exact sequence recovery and index continuity.
-- [ ] Add deterministic image-to-bitstream fixtures and round-trip tests.
+- [x] Add byte-level round-trip fixtures representative of arbitrary file data.
 
 Exit condition: all software tests pass and no operation changes a bit value, order, or count.
 
