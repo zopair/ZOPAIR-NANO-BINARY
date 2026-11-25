@@ -26,7 +26,7 @@ Follow the concept in seven stages, from the original image through the unchange
 
 ![Seven-stage NANO-BINARY concept journey](assets/nano-binary-journey.svg)
 
-Read the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
+See the focused illustration: [Binary field → one-shaped thread](assets/binary-field-to-one-thread.svg). It shows a binary field on the left and the same ordered values routed as one continuous thread shaped like the numeral 1 on the right. The numeral is the thread's geometry, not a replacement bit.\n\nRead the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
 
 ## Repository map
 
