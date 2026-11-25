@@ -16,9 +16,17 @@ The project studies **physical representation and geometry**, not information co
 
 ## Core model
 
-Let B = (b_0, ..., b_(N-1)), where every b_i is 0 or 1. A representation associates each original index and value with a geometric position. A positive scale factor multiplies all coordinates without changing the bit values or indices. The required software invariant is exact recovery: D(T(B)) = B.
+Let B = (b_0, ..., b_(N-1)), where every b_i is 0 or 1. The concept keeps three things explicit and unchanged:
 
-A helical path is included as an **illustrative geometry only**. Its existence in a simulation does not prove that matter can be fabricated, distinguished, written, retained, or read at the corresponding scale.
+- **Symbol identity.** Every value keeps its own symbol: a 0 stays a 0 and a 1 stays a 1. The representation never replaces the values with a new alphabet, and no value is merged into or substituted by another shape.
+- **Spaces as part of the layout.** The spaces between consecutive symbols belong to the sequence layout exactly like the symbols themselves. Symbols and spaces are scaled together by one common factor.
+- **Uniform scaling.** A single positive scale factor s multiplies every coordinate — symbol bodies and inter-symbol spaces alike — reducing the drawing scale of the whole layout toward the target (nano) scale. Nothing is re-proportioned; the same factor applies to every part.
+
+With an identifiable start point and end point, the ordered sequence of symbols and spaces forms one continuous **thread**. The thread is routed so that its outer contour forms the shape of the numeral **1**. The numeral is the geometry the thread follows — the arrangement of the complete ordered sequence — not an additional bit, and not a replacement of the values by a single 1.
+
+A representation associates each original index and value with a geometric position. The required software invariant is exact recovery: D(T(B)) = B.
+
+**Current implementation status.** The software prototype stores each bit value with its original index and maps indices to points on a helical path, included as an **illustrative geometry only**. The symbol-shape embodiment and the numeral-1 thread routing described above are the author's concept stages: they are documented and illustrated (see the visual walkthrough) but not yet implemented in code. Existence in a simulation does not prove that matter can be fabricated, distinguished, written, retained, or read at the corresponding scale.
 
 ## Visual walkthrough
 
@@ -26,7 +34,9 @@ Follow the concept in seven stages, from the original image through the unchange
 
 ![Seven-stage NANO-BINARY concept journey](assets/nano-binary-journey.svg)
 
-See the focused illustration: [Binary field → one-shaped thread](assets/binary-field-to-one-thread.svg). It shows a binary field on the left and the same ordered values routed as one continuous thread shaped like the numeral 1 on the right. The numeral is the thread's geometry, not a replacement bit.\n\nRead the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
+See the focused illustration: [Binary field → one-shaped thread](assets/binary-field-to-one-thread.svg). It shows a binary field on the left and the same ordered values routed as one continuous thread shaped like the numeral 1 on the right. The numeral is the thread's geometry, not a replacement bit.
+
+Read the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
 
 ## Repository map
 
