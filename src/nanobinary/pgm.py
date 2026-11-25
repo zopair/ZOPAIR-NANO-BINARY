@@ -1,7 +1,7 @@
 """Dependency-free PGM raster writer/reader for binary grid experiments.
 
 PGM P5 (8-bit grayscale) is intentionally used so the experiment needs only
-the Python standard library. 0 is black, 1 is white; cell gaps remain white.
+the Python standard library. 0 is black, 1 is white, and gray separators are geometry.
 """
 from __future__ import annotations
 
