@@ -97,9 +97,11 @@ The prototype uses the Python standard library and GitHub Actions. No paid APIs,
 
 ## Intellectual Property & Authorship
 
-Project authorship and intellectual-property notice: **Aly Hussein Zopair (علي حسين زبير ALY HUSSEIN ZOPAIR)**.
+Copyright (c) 2026 **Aly Hussein Zopair (علي حسين زبير ALY HUSSEIN ZOPAIR)**.
 
-This notice identifies the project author as supplied by the repository owner. It does not assert patentability, novelty, or ownership of third-party scientific methods or prior art.
+The NANO-BINARY concept, documentation, and this repository's original content are authored by Aly Hussein Zopair and released as open source under the MIT License (see LICENSE). This notice identifies the project author as supplied by the repository owner. It does not assert patentability, novelty, or ownership of third-party scientific methods or prior art.
+
+**Contact:** zopairaly@gmail.com · alyzopairaly@gmail.com
 
 ## License
 
