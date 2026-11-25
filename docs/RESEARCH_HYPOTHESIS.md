@@ -6,6 +6,10 @@ A finite binary sequence can be assigned a smaller geometric representation whil
 
 The hypothesis concerns the physical embodiment of an already-defined sequence. It is not a proposal to encode many bits as one informational bit, and it is not conventional compression.
 
+## The concept in the author's terms
+
+Every 0 stays a 0 and every 1 stays a 1: the symbols themselves are the states, not an abstract code. The spaces between symbols are part of the same layout. One common scale factor shrinks symbols and spaces together, reducing the drawing scale of the whole layout toward the nanoscale. Between an identifiable start and end, the ordered symbols and spaces form a single continuous thread, and the thread is routed so that its outer contour forms the numeral 1. The numeral is the thread's outer shape — the arrangement of the complete ordered sequence — not an extra bit, and not a claim that one physical mark replaces many bits.
+
 ## Fixed invariants
 
 For an input sequence B of length N:
@@ -16,12 +20,17 @@ For an input sequence B of length N:
 4. Adjacency is defined by consecutive indices and must be preserved by the representation.
 5. The start and end are identifiable.
 6. Decoding returns exactly N values in exactly the original order.
+7. The spaces between consecutive positions belong to the layout and scale under the same common factor as the symbol bodies.
 
 A physical design may change the shape, dimensions, or path followed by the sequence. It may not silently change the sequence itself.
 
 ## Terms used in this repository
 
 - Bit value: the binary state 0 or 1.
+- Symbol identity: each value keeps its own symbol — 0 stays 0 and 1 stays 1; values are never replaced by a new alphabet.
+- Inter-symbol space: the spacing between consecutive symbols, treated as part of the sequence layout and scaled by the same factor as the symbols.
+- Thread: the continuous ordered arrangement of symbols and spaces between an identifiable start and end.
+- Outer form: the contour the thread is routed into; in the author's concept this is the numeral 1. The outer form arranges the sequence and carries no additional bit.
 - Index: the original position of a bit in the sequence.
 - Geometric embedding: a mapping from each index to a position in a modeled space.
 - Scale factor: a positive multiplier applied consistently to geometric coordinates.
