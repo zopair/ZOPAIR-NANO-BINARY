@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1600" viewBox="0 0 1800 1600">
 <defs>
  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset="1" stop-color="#15263d"/></linearGradient>
  <linearGradient id="gold"><stop stop-color="#d8a83f"/><stop offset="1" stop-color="#ffe7a0"/></linearGradient>
@@ -44,15 +44,15 @@
 <text x="1325" y="700" text-anchor="middle" class="body">Crosshair is a locator only — not the square's size.</text>
 
 <!-- Exact magnified view -->
-<rect x="80" y="1020" width="1640" height="360" rx="22" fill="#0b1625" stroke="#586b84" stroke-width="1.5"/>
+<rect x="80" y="1020" width="1640" height="500" rx="22" fill="#0b1625" stroke="#586b84" stroke-width="1.5"/>
 <text x="120" y="1070" class="h">Magnified view of the after-image</text>
 <text x="120" y="1105" class="body">The tiny square above is enlarged here by exactly 1,000,000× in each linear dimension.</text>
-<rect x="180" y="1140" width="195" height="195" fill="#d5a943" fill-opacity=".08" stroke="#f1cb70" stroke-width="2"/>
-<rect x="180" y="1140" width="195" height="195" fill="url(#unitGrid)"/>
-<text x="440" y="1185" class="gold">Enlargement: ×1,000,000</text>
-<text x="440" y="1225" class="body">Displayed square = 195 px here; its actual side is 1 μm.</text>
-<text x="440" y="1265" class="body">The model still contains 1,000 rows × 1,000 columns.</text>
-<text x="440" y="1305" class="body">Each original 1 mm unit becomes a 1 nm unit.</text>
-<text x="440" y="1345" class="body">Grid is schematic; all dimensions follow the same scale factor.</text>
-<text x="1690" y="1420" text-anchor="end" class="body">Geometric model • illustrative rendering, not a fabrication claim</text>
+<rect x="180" y="1140" width="390" height="390" fill="#d5a943" fill-opacity=".08" stroke="#f1cb70" stroke-width="2"/>
+<rect x="180" y="1140" width="390" height="390" fill="url(#unitGrid)"/>
+<text x="650" y="1185" class="gold">Enlargement: ×1,000,000</text>
+<text x="650" y="1225" class="body">Displayed square = 390 px here; its actual side is 1 μm.</text>
+<text x="650" y="1265" class="body">The model still contains 1,000 rows × 1,000 columns.</text>
+<text x="650" y="1305" class="body">Each original 1 mm unit becomes a 1 nm unit.</text>
+<text x="650" y="1345" class="body">Grid is schematic; all dimensions follow the same scale factor.</text>
+<text x="1690" y="1570" text-anchor="end" class="body">Geometric model • illustrative rendering, not a fabrication claim</text>
 </svg>
