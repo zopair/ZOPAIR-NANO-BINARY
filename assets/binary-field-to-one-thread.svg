@@ -25,9 +25,9 @@
 <text x="125" y="273" class="copy">A structured sequence of 0 and 1 — not random decoration.</text>
 <rect x="125" y="320" width="590" height="112" rx="12" fill="#111b2a" stroke="#68778c" stroke-width="1.5"/>
 <text x="150" y="365" class="bit">0 1 1 0 1 0 0 1  1 0 1 1 0 0 1 0</text>
-<text x="150" y="405" class="bit">1 0 0 1 0 1 1 0  0 1 0 0 1 1 0 1</text>
+
 <text x="125" y="490" class="copy">Each position has its own index and value.</text>
-<text x="125" y="530" class="tiny">Illustrative 32-bit sample · actual projects may contain millions of bits.</text>
+<text x="125" y="530" class="tiny">Illustrative 16-bit sample · actual projects may contain millions of bits.</text>
 <path d="M130 590 H700" stroke="#d5a64a" stroke-width="2" opacity=".55"/>
 <text x="130" y="630" class="tiny">START → original order → END</text>
 <text x="130" y="670" class="tiny">No deletion · no merging · no reordering · no compression</text>
@@ -56,11 +56,11 @@
 <circle class="node" cx="1380" cy="400" r="18"/><text class="bit" x="1373" y="407">1</text>
 <circle class="node" cx="1380" cy="450" r="18"/><text class="bit" x="1373" y="457">0</text>
 <circle class="node" cx="1380" cy="500" r="18"/><text class="bit" x="1373" y="507">1</text>
-<circle class="node" cx="1380" cy="550" r="18"/><text class="bit" x="1373" y="557">0</text>
+<circle class="node" cx="1380" cy="550" r="18"/><text class="bit" x="1373" y="557">1</text>
 <circle class="node" cx="1380" cy="620" r="18"/><text class="bit" x="1373" y="627">0</text>
-<circle class="node" cx="1400" cy="665" r="18"/><text class="bit" x="1393" y="672">1</text>
-<circle class="node" cx="1450" cy="665" r="18"/><text class="bit" x="1443" y="672">0</text>
-<circle class="node" cx="1500" cy="665" r="18"/><text class="bit" x="1493" y="672">1</text>
+<circle class="node" cx="1400" cy="665" r="18"/><text class="bit" x="1393" y="672">0</text>
+<circle class="node" cx="1450" cy="665" r="18"/><text class="bit" x="1443" y="672">1</text>
+<circle class="node" cx="1500" cy="665" r="18"/><text class="bit" x="1493" y="672">0</text>
 </g>
 <text x="1090" y="705" class="tiny">START</text><text x="1558" y="705" class="tiny">CONTINUES →</text>
 
