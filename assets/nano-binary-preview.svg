@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#14243a"/></linearGradient>
+ <linearGradient id="gold"><stop stop-color="#e9b94f"/><stop offset="1" stop-color="#ffe7a3"/></linearGradient>
+ <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#30415a" stroke-width="1"/></pattern>
+ <style>
+ .h{font:700 34px Arial,sans-serif;fill:#f7f8fb}.sub{font:18px Arial,sans-serif;fill:#bdc9d9}.small{font:14px Arial,sans-serif;fill:#aebbd0}
+ .bit{font:700 22px monospace;fill:#f6d783}.tiny{font:700 13px monospace;fill:#f6d783}.tag{font:700 15px Arial,sans-serif;fill:#101827}
+ </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)" opacity=".3"/>
+<text x="800" y="62" text-anchor="middle" class="h">NANO-BINARY — GEOMETRIC SCALE CONCEPT</text>
+<text x="800" y="99" text-anchor="middle" class="sub">Same ordered binary sequence • same bit count • uniformly reduced geometry</text>
+<rect x="45" y="145" width="585" height="555" rx="22" fill="#101e31" stroke="#53647c" stroke-width="2"/>
+<rect x="72" y="169" width="176" height="30" rx="15" fill="url(#gold)"/><text x="160" y="190" text-anchor="middle" class="tag">01 / ORIGINAL SCALE</text>
+<text x="82" y="245" class="h" font-size="27">Original-size sequence</text><text x="82" y="278" class="sub">Ordered field of binary values</text>
+<g class="bit" text-anchor="middle">
+<text x="108" y="345">0</text><text x="170" y="345">1</text><text x="232" y="345">1</text><text x="294" y="345">1</text><text x="356" y="345">1</text><text x="418" y="345">0</text><text x="480" y="345">0</text><text x="542" y="345">0</text>
+<text x="108" y="402">0</text><text x="170" y="402">0</text><text x="232" y="402">0</text><text x="294" y="402">0</text><text x="356" y="402">1</text><text x="418" y="402">1</text><text x="480" y="402">1</text><text x="542" y="402">1</text>
+<text x="108" y="459">1</text><text x="170" y="459">1</text><text x="232" y="459">1</text><text x="294" y="459">0</text><text x="356" y="459">0</text><text x="418" y="459">0</text><text x="480" y="459">0</text><text x="542" y="459">1</text>
+<text x="108" y="516">0</text><text x="170" y="516">0</text><text x="232" y="516">1</text><text x="294" y="516">1</text><text x="356" y="516">1</text><text x="418" y="516">1</text><text x="480" y="516">0</text><text x="542" y="516">0</text>
+<text x="108" y="573">1</text><text x="170" y="573">0</text><text x="232" y="573">0</text><text x="294" y="573">0</text><text x="356" y="573">0</text><text x="418" y="573">1</text><text x="480" y="573">1</text><text x="542" y="573">1</text>
+</g>
+<path d="M90 620H585" stroke="#e9bd59" stroke-width="3"/><text x="90" y="653" class="sub">N bits • original order and adjacency</text>
+<text x="800" y="350" text-anchor="middle" class="h" font-size="25">Uniform scaling</text>
+<path d="M660 420H935m-25-20 25 20-25 20" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="475" text-anchor="middle" class="sub">Every length × s</text><text x="800" y="505" text-anchor="middle" class="small">Illustrative scale factor — not measured</text><text x="800" y="550" text-anchor="middle" class="small">Bit count N remains unchanged</text>
+<rect x="970" y="145" width="585" height="555" rx="22" fill="#101e31" stroke="#d6ae52" stroke-width="2"/>
+<rect x="997" y="169" width="230" height="30" rx="15" fill="url(#gold)"/><text x="1112" y="190" text-anchor="middle" class="tag">02 / CONCEPTUAL NANOSCALE</text>
+<text x="1007" y="245" class="h" font-size="27">Same sequence, reduced dimensions</text><text x="1007" y="278" class="sub">One continuous thread shaped as numeral 1</text>
+<path d="M1190 380L1300 315V590H1170" fill="none" stroke="#f4c65d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g class="tiny" text-anchor="middle">
+<text x="1200" y="373">0</text><text x="1220" y="360">1</text><text x="1240" y="348">0</text><text x="1260" y="336">1</text><text x="1280" y="324">0</text>
+<text x="1300" y="350">1</text><text x="1300" y="378">0</text><text x="1300" y="406">1</text><text x="1300" y="434">0</text><text x="1300" y="462">1</text><text x="1300" y="490">0</text><text x="1300" y="518">1</text><text x="1300" y="546">0</text><text x="1300" y="574">1</text>
+<text x="1270" y="590">0</text><text x="1235" y="590">1</text><text x="1200" y="590">0</text>
+</g>
+<circle cx="1100" cy="505" r="76" fill="#07111f" stroke="#f4c65d" stroke-width="3"/>
+<g class="tiny" text-anchor="middle"><text x="1065" y="480">0</text><text x="1085" y="480">1</text><text x="1105" y="480">0</text><text x="1125" y="480">1</text><text x="1145" y="480">0</text><text x="1065" y="505">1</text><text x="1085" y="505">0</text><text x="1105" y="505">1</text><text x="1125" y="505">0</text><text x="1145" y="505">1</text><text x="1065" y="530">0</text><text x="1085" y="530">1</text><text x="1105" y="530">0</text><text x="1125" y="530">1</text><text x="1145" y="530">0</text></g>
+<text x="1100" y="603" text-anchor="middle" class="small">Magnified detail</text>
+<text x="1370" y="410" class="sub">Full ordered</text><text x="1370" y="438" class="sub">binary thread</text><text x="1370" y="466" class="sub">not one bit</text>
+<path d="M1005 635H1520" stroke="#d6ae52" stroke-width="1.5"/><text x="1005" y="663" class="small">Conceptual nanoscale only — no fabrication claim</text>
+<rect x="45" y="735" width="1510" height="112" rx="18" fill="#0b1524" stroke="#394b63"/>
+<text x="80" y="780" class="h" font-size="24">INVARIANTS</text><text x="300" y="778" class="sub">Values unchanged</text><text x="540" y="778" class="sub">Bit count unchanged</text><text x="800" y="778" class="sub">Order unchanged</text><text x="1040" y="778" class="sub">Adjacency unchanged</text>
+<text x="300" y="817" class="small">All geometric dimensions are intended to scale together. Physical feasibility requires separate material, fabrication and read/write validation.</text>
+<text x="1520" y="880" text-anchor="end" class="small">Research visualization • illustrative, not to scale</text>
+</svg>
