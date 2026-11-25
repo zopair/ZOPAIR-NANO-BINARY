@@ -17,7 +17,7 @@ The PoC is not compression. It rejects input whose bit count does not exactly ma
 - `poc.py`: command-line encode/decode workflow and a SHA-256 source manifest.
 - `test_physical_poc.py`: geometry, exact recovery, invalid dimensions, and a structured million-bit fixture.
 
-Each bit is represented by a black (0) or white (1) square. A white inter-cell gap preserves a visible pitch between neighboring cells. Cell size and gap are parameters of the same raster geometry.
+Each bit is represented by a black (0) or white (1) square. A gray structural separator marks the gap between neighboring cells; it is not an additional data bit. Cell size and gap are parameters of the same raster geometry.
 
 ## Run the tests
 
