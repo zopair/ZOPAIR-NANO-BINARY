@@ -1,46 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100">
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#14243a"/></linearGradient>
- <linearGradient id="gold"><stop stop-color="#e9b94f"/><stop offset="1" stop-color="#ffe7a3"/></linearGradient>
- <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#30415a" stroke-width="1"/></pattern>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset="1" stop-color="#14243a"/></linearGradient>
+ <linearGradient id="gold"><stop stop-color="#dcae45"/><stop offset="1" stop-color="#ffe8a3"/></linearGradient>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#30435b" stroke-width="1"/></pattern>
+ <pattern id="micro" width="7" height="16" patternUnits="userSpaceOnUse"><rect width="7" height="16" fill="#17283d"/><path d="M6.5 0V16" stroke="#e5bd62" stroke-width=".8"/><circle cx="3.5" cy="8" r="1.4" fill="#ffe39a"/></pattern>
+ <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <style>
- .h{font:700 34px Arial,sans-serif;fill:#f7f8fb}.sub{font:18px Arial,sans-serif;fill:#bdc9d9}.small{font:14px Arial,sans-serif;fill:#aebbd0}
- .bit{font:700 22px monospace;fill:#f6d783}.tiny{font:700 13px monospace;fill:#f6d783}.tag{font:700 15px Arial,sans-serif;fill:#101827}
+ .title{font:700 39px Arial,sans-serif;fill:#f7f8fb}.head{font:700 27px Arial,sans-serif;fill:#f7f8fb}
+ .sub{font:19px Arial,sans-serif;fill:#c1ccdb}.body{font:16px Arial,sans-serif;fill:#b6c3d4}
+ .gold{font:700 24px Arial,sans-serif;fill:#ffe39a}.tag{font:700 16px Arial,sans-serif;fill:#111c2b}
+ .bit{font:700 19px monospace;fill:#ffe39a}.tiny{font:700 17px monospace;fill:#ffe39a}
  </style>
 </defs>
-<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)" opacity=".3"/>
-<text x="800" y="62" text-anchor="middle" class="h">NANO-BINARY — GEOMETRIC SCALE CONCEPT</text>
-<text x="800" y="99" text-anchor="middle" class="sub">Same ordered binary sequence • same bit count • uniformly reduced geometry</text>
-<rect x="45" y="145" width="585" height="555" rx="22" fill="#101e31" stroke="#53647c" stroke-width="2"/>
-<rect x="72" y="169" width="176" height="30" rx="15" fill="url(#gold)"/><text x="160" y="190" text-anchor="middle" class="tag">01 / ORIGINAL SCALE</text>
-<text x="82" y="245" class="h" font-size="27">Original-size sequence</text><text x="82" y="278" class="sub">Ordered field of binary values</text>
-<g class="bit" text-anchor="middle">
-<text x="108" y="345">0</text><text x="170" y="345">1</text><text x="232" y="345">1</text><text x="294" y="345">1</text><text x="356" y="345">1</text><text x="418" y="345">0</text><text x="480" y="345">0</text><text x="542" y="345">0</text>
-<text x="108" y="402">0</text><text x="170" y="402">0</text><text x="232" y="402">0</text><text x="294" y="402">0</text><text x="356" y="402">1</text><text x="418" y="402">1</text><text x="480" y="402">1</text><text x="542" y="402">1</text>
-<text x="108" y="459">1</text><text x="170" y="459">1</text><text x="232" y="459">1</text><text x="294" y="459">0</text><text x="356" y="459">0</text><text x="418" y="459">0</text><text x="480" y="459">0</text><text x="542" y="459">1</text>
-<text x="108" y="516">0</text><text x="170" y="516">0</text><text x="232" y="516">1</text><text x="294" y="516">1</text><text x="356" y="516">1</text><text x="418" y="516">1</text><text x="480" y="516">0</text><text x="542" y="516">0</text>
-<text x="108" y="573">1</text><text x="170" y="573">0</text><text x="232" y="573">0</text><text x="294" y="573">0</text><text x="356" y="573">0</text><text x="418" y="573">1</text><text x="480" y="573">1</text><text x="542" y="573">1</text>
-</g>
-<path d="M90 620H585" stroke="#e9bd59" stroke-width="3"/><text x="90" y="653" class="sub">N bits • original order and adjacency</text>
-<text x="800" y="350" text-anchor="middle" class="h" font-size="25">Uniform scaling</text>
-<path d="M660 420H935m-25-20 25 20-25 20" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="800" y="475" text-anchor="middle" class="sub">Every length × s</text><text x="800" y="505" text-anchor="middle" class="small">Illustrative scale factor — not measured</text><text x="800" y="550" text-anchor="middle" class="small">Bit count N remains unchanged</text>
-<rect x="970" y="145" width="585" height="555" rx="22" fill="#101e31" stroke="#d6ae52" stroke-width="2"/>
-<rect x="997" y="169" width="230" height="30" rx="15" fill="url(#gold)"/><text x="1112" y="190" text-anchor="middle" class="tag">02 / CONCEPTUAL NANOSCALE</text>
-<text x="1007" y="245" class="h" font-size="27">Same sequence, reduced dimensions</text><text x="1007" y="278" class="sub">One continuous thread shaped as numeral 1</text>
-<path d="M1190 380L1300 315V590H1170" fill="none" stroke="#f4c65d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect width="1800" height="1100" fill="url(#bg)"/><rect width="1800" height="1100" fill="url(#grid)" opacity=".24"/>
+<text x="900" y="66" text-anchor="middle" class="title">NANO-BINARY — THE SCALE RELATION</text>
+<text x="900" y="108" text-anchor="middle" class="sub">A million nanoscale length units correspond to one millimeter — while the ordered binary structure remains intact</text>
+
+<!-- Unit conversion -->
+<rect x="90" y="145" width="1620" height="145" rx="22" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
+<text x="900" y="202" text-anchor="middle" class="gold" font-size="38">1,000,000 nm = 1 mm</text>
+<text x="900" y="244" text-anchor="middle" class="sub">One million nanometers make one millimeter. This is the unit conversion that anchors the physical scale.</text>
+
+<!-- macro ruler -->
+<rect x="90" y="330" width="760" height="430" rx="22" fill="#101e31" stroke="#53647c" stroke-width="2"/>
+<rect x="120" y="355" width="190" height="31" rx="15" fill="url(#gold)"/><text x="215" y="377" text-anchor="middle" class="tag">MACRO LENGTH</text>
+<text x="130" y="430" class="head">A 1 mm continuous path</text>
+<text x="130" y="465" class="sub">Conceptual path occupied by 1,000,000 ordered nanoscale positions</text>
+<path d="M150 565H785" stroke="#f3ca69" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+<path d="M150 542V590M785 542V590" stroke="#f3ca69" stroke-width="3"/>
+<g stroke="#f3ca69" stroke-width="2"><path d="M213 555V575M276 555V575M339 555V575M402 555V575M465 555V575M528 555V575M591 555V575M654 555V575M717 555V575"/></g>
+<text x="150" y="625" class="gold">0</text><text x="785" y="625" text-anchor="end" class="gold">1 mm</text>
+<text x="467" y="672" text-anchor="middle" class="sub">1,000,000 × 1 nm spatial pitch = 1 mm total path length</text>
+<text x="130" y="720" class="body">The line represents the full ordered sequence, not a single replacement bit.</text>
+
+<!-- shape -->
+<rect x="890" y="330" width="820" height="430" rx="22" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
+<rect x="920" y="355" width="245" height="31" rx="15" fill="url(#gold)"/><text x="1042" y="377" text-anchor="middle" class="tag">GEOMETRIC ARRANGEMENT</text>
+<text x="930" y="430" class="head">The same full-length thread, shaped as “1”</text>
+<text x="930" y="465" class="sub">The numeral is the geometry of the complete path — not the value of one bit.</text>
+<path d="M1195 560L1375 490V680H1160" fill="none" stroke="#f4c65d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+<path d="M1195 560L1375 490V680H1160" fill="none" stroke="#fff0bd" stroke-width="2" stroke-dasharray="3 4"/>
 <g class="tiny" text-anchor="middle">
-<text x="1200" y="373">0</text><text x="1220" y="360">1</text><text x="1240" y="348">0</text><text x="1260" y="336">1</text><text x="1280" y="324">0</text>
-<text x="1300" y="350">1</text><text x="1300" y="378">0</text><text x="1300" y="406">1</text><text x="1300" y="434">0</text><text x="1300" y="462">1</text><text x="1300" y="490">0</text><text x="1300" y="518">1</text><text x="1300" y="546">0</text><text x="1300" y="574">1</text>
-<text x="1270" y="590">0</text><text x="1235" y="590">1</text><text x="1200" y="590">0</text>
+<text x="1210" y="552">0</text><text x="1240" y="540">1</text><text x="1270" y="528">0</text><text x="1300" y="516">1</text><text x="1330" y="504">0</text><text x="1360" y="492">1</text>
+<text x="1375" y="525">0</text><text x="1375" y="557">1</text><text x="1375" y="589">0</text><text x="1375" y="621">1</text><text x="1375" y="653">0</text>
+<text x="1345" y="680">1</text><text x="1310" y="680">0</text><text x="1275" y="680">1</text><text x="1240" y="680">0</text><text x="1205" y="680">1</text>
 </g>
-<circle cx="1100" cy="505" r="76" fill="#07111f" stroke="#f4c65d" stroke-width="3"/>
-<g class="tiny" text-anchor="middle"><text x="1065" y="480">0</text><text x="1085" y="480">1</text><text x="1105" y="480">0</text><text x="1125" y="480">1</text><text x="1145" y="480">0</text><text x="1065" y="505">1</text><text x="1085" y="505">0</text><text x="1105" y="505">1</text><text x="1125" y="505">0</text><text x="1145" y="505">1</text><text x="1065" y="530">0</text><text x="1085" y="530">1</text><text x="1105" y="530">0</text><text x="1125" y="530">1</text><text x="1145" y="530">0</text></g>
-<text x="1100" y="603" text-anchor="middle" class="small">Magnified detail</text>
-<text x="1370" y="410" class="sub">Full ordered</text><text x="1370" y="438" class="sub">binary thread</text><text x="1370" y="466" class="sub">not one bit</text>
-<path d="M1005 635H1520" stroke="#d6ae52" stroke-width="1.5"/><text x="1005" y="663" class="small">Conceptual nanoscale only — no fabrication claim</text>
-<rect x="45" y="735" width="1510" height="112" rx="18" fill="#0b1524" stroke="#394b63"/>
-<text x="80" y="780" class="h" font-size="24">INVARIANTS</text><text x="300" y="778" class="sub">Values unchanged</text><text x="540" y="778" class="sub">Bit count unchanged</text><text x="800" y="778" class="sub">Order unchanged</text><text x="1040" y="778" class="sub">Adjacency unchanged</text>
-<text x="300" y="817" class="small">All geometric dimensions are intended to scale together. Physical feasibility requires separate material, fabrication and read/write validation.</text>
-<text x="1520" y="880" text-anchor="end" class="small">Research visualization • illustrative, not to scale</text>
+<text x="1470" y="550" class="sub">Entire sequence</text><text x="1470" y="580" class="sub">follows one path</text><text x="1470" y="610" class="sub">with preserved order</text>
+<text x="930" y="720" class="body">Schematic shape only: path length is defined by the scale relation, not by screen pixels.</text>
+
+<!-- magnified nanoscale cells -->
+<rect x="90" y="795" width="1620" height="230" rx="22" fill="#0b1625" stroke="#53647c" stroke-width="2"/>
+<text x="125" y="842" class="head">Magnified view of a short segment</text>
+<text x="125" y="875" class="body">Each illustrated position has a 1 nm pitch in this conceptual example. The inset is enlarged for visibility.</text>
+<rect x="130" y="910" width="980" height="64" rx="8" fill="url(#micro)" stroke="#e4bd62" stroke-width="1.5"/>
+<g class="bit" text-anchor="middle">
+<text x="165" y="951">0</text><text x="235" y="951">1</text><text x="305" y="951">0</text><text x="375" y="951">1</text><text x="445" y="951">1</text><text x="515" y="951">0</text><text x="585" y="951">0</text><text x="655" y="951">1</text><text x="725" y="951">0</text><text x="795" y="951">1</text><text x="865" y="951">1</text><text x="935" y="951">0</text><text x="1005" y="951">1</text><text x="1075" y="951">0</text>
+</g>
+<path d="M1180 917H1600" stroke="#eac568" stroke-width="2"/><path d="M1180 906V928M1600 906V928" stroke="#eac568" stroke-width="2"/>
+<text x="1390" y="960" text-anchor="middle" class="gold">Magnified × 1,000,000 for viewing</text>
+<text x="1390" y="990" text-anchor="middle" class="body">Illustrative 1 nm pitch; material feasibility remains to be tested.</text>
+<text x="1690" y="1070" text-anchor="end" class="body">Research concept • not a fabrication claim</text>
 </svg>
