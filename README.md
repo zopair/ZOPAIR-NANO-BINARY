@@ -34,7 +34,7 @@ The first executable PoC renders a binary sequence as a black/white 2-D cell gri
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-Generate a one-million-bit specimen from an input file containing exactly 125,000 bytes:
+Generate a deterministic, structured one-million-bit specimen, its binary source file, raster, and SHA-256 manifest in one command:
 
 ```bash
 PYTHONPATH=src python -m nanobinary.poc encode \
