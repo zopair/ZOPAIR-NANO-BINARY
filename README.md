@@ -26,7 +26,7 @@ For \(B=(b_0,\ldots,b_{N-1})\), where each \(b_i\in\{0,1\}\):
 
 ## Physical Scale Preservation PoC
 
-The first executable PoC renders a binary sequence as a black/white 2-D cell grid in dependency-free PGM format, then reads each cell center back into the original bit order. It includes a million-bit structured test fixture and explicit geometry scaling calculations.
+The first executable PoC renders a binary sequence as a black/white 2-D cell grid in dependency-free PGM format. Gray separators represent geometric spacing only, not a third data value. The decoder samples each cell center in the original bit order. It includes a million-bit structured test fixture and explicit geometry scaling calculations.
 
 **Quick start** (Python 3.10+, standard library only):
 
