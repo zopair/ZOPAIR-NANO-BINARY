@@ -20,6 +20,14 @@ Let B = (b_0, ..., b_(N-1)), where every b_i is 0 or 1. A representation associa
 
 A helical path is included as an **illustrative geometry only**. Its existence in a simulation does not prove that matter can be fabricated, distinguished, written, retained, or read at the corresponding scale.
 
+## Visual walkthrough
+
+Follow the concept in seven stages, from the original image through the unchanged bitstream, geometric path, uniform scaling, composite-object concept, and exact reconstruction. The final stage separates software evidence from physical proof requirements.
+
+![Seven-stage NANO-BINARY concept journey](assets/nano-binary-journey.svg)
+
+Read the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
+
 ## Repository map
 
 - docs/RESEARCH_HYPOTHESIS.md — precise scope and terminology.
