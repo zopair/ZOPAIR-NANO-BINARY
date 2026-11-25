@@ -29,7 +29,13 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 ## Generate a one-million-bit specimen
 
-The input must contain exactly 125,000 bytes (1,000,000 bits). This strict requirement prevents silent padding or loss.
+Generate the deterministic structured fixture, its 125,000-byte source file, PGM raster, and SHA-256 manifest in one command:
+
+\`\`\`bash
+PYTHONPATH=src python -m nanobinary.poc demo --output-dir build/nano-binary-demo
+\`\`\`
+
+The fixture combines repeated row/column bands and diagonal structure. It is deterministic, not random. The encoder also accepts an existing input file, but it must contain exactly 125,000 bytes (1,000,000 bits); no padding or truncation is allowed.
 
 ```bash
 PYTHONPATH=src python -m nanobinary.poc encode \
