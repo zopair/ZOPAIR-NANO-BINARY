@@ -1,6 +1,26 @@
 import unittest
 
+from nanobinary.binary import bits_to_bytes, bytes_to_bits
 from nanobinary.geometry import decode_points, map_to_helix
+
+
+class BinaryRoundTripTests(unittest.TestCase):
+    def test_bytes_round_trip_preserves_every_bit(self):
+        original = bytes([0, 1, 127, 128, 255, 42])
+        bits = bytes_to_bits(original)
+        self.assertEqual(len(bits), len(original) * 8)
+        self.assertEqual(bits_to_bytes(bits), original)
+
+    def test_empty_bytes_round_trip(self):
+        self.assertEqual(bits_to_bytes(bytes_to_bits(b"")), b"")
+
+    def test_partial_byte_is_rejected(self):
+        with self.assertRaises(ValueError):
+            bits_to_bytes("101")
+
+    def test_non_binary_input_is_rejected(self):
+        with self.assertRaises(ValueError):
+            bits_to_bytes("10x01010")
 
 
 class GeometryInvariantTests(unittest.TestCase):
