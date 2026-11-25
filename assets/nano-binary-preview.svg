@@ -1,58 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1600" viewBox="0 0 1800 1600">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset="1" stop-color="#15263d"/></linearGradient>
- <linearGradient id="gold"><stop stop-color="#d8a83f"/><stop offset="1" stop-color="#ffe7a0"/></linearGradient>
- <pattern id="unitGrid" width=".39" height=".39" patternUnits="userSpaceOnUse"><path d="M.39 0H0V.39" fill="none" stroke="#e6bd62" stroke-width=".035"/></pattern>
- <style>
- .title{font:700 40px Arial,sans-serif;fill:#f7f8fb}.h{font:700 29px Arial,sans-serif;fill:#f7f8fb}
- .sub{font:19px Arial,sans-serif;fill:#c1ccdb}.body{font:16px Arial,sans-serif;fill:#b8c5d6}
- .gold{font:700 26px Arial,sans-serif;fill:#ffe39a}.tag{font:700 16px Arial,sans-serif;fill:#101a29}
- </style>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset="1" stop-color="#172a42"/></linearGradient>
+  <pattern id="millionDots" width=".54" height=".54" patternUnits="userSpaceOnUse">
+    <circle cx=".27" cy=".27" r=".16" fill="#f2ca70"/>
+  </pattern>
+  <style>
+    .title{font:700 42px Arial,sans-serif;fill:#fff}
+    .head{font:700 28px Arial,sans-serif;fill:#ffe39a}
+    .body{font:21px Arial,sans-serif;fill:#d0d9e5}
+    .small{font:17px Arial,sans-serif;fill:#aebed0}
+  </style>
 </defs>
-<rect width="1800" height="1450" fill="url(#bg)"/>
-<text x="900" y="65" text-anchor="middle" class="title">NANO-BINARY — TRUE SCALE COMPARISON</text>
-<text x="900" y="105" text-anchor="middle" class="sub">One square image • 1,000 × 1,000 units • same complete grid before and after scaling</text>
-<rect x="80" y="140" width="1640" height="120" rx="20" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
-<text x="900" y="190" text-anchor="middle" class="gold" font-size="35">1 m = 1,000,000 μm</text>
-<text x="900" y="230" text-anchor="middle" class="sub">Linear ratio 1 : 1,000,000     •     Area ratio 1 : 1,000,000,000,000</text>
+<rect width="1600" height="1050" fill="url(#bg)"/>
+<text x="800" y="72" text-anchor="middle" class="title">NANO-BINARY — MILLION DOTS / ONE DOT</text>
+<text x="800" y="118" text-anchor="middle" class="body">Two representations shown side by side</text>
 
-<rect x="80" y="295" width="790" height="690" rx="22" fill="#101e31" stroke="#586b84" stroke-width="2"/>
-<rect x="930" y="295" width="790" height="690" rx="22" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
-<rect x="110" y="320" width="205" height="31" rx="15" fill="url(#gold)"/><text x="212" y="342" text-anchor="middle" class="tag">BEFORE SCALING</text>
-<rect x="960" y="320" width="205" height="31" rx="15" fill="url(#gold)"/><text x="1062" y="342" text-anchor="middle" class="tag">AFTER SCALING</text>
-<text x="475" y="400" text-anchor="middle" class="h">1 m × 1 m</text>
-<text x="1325" y="400" text-anchor="middle" class="h">1 μm × 1 μm</text>
+<rect x="55" y="165" width="720" height="700" rx="24" fill="#0d1a2b" stroke="#c69d4b" stroke-width="2"/>
+<rect x="825" y="165" width="720" height="700" rx="24" fill="#0d1a2b" stroke="#c69d4b" stroke-width="2"/>
 
-<!-- Original: a 390px square representing 1m -->
-<rect x="280" y="450" width="390" height="390" fill="#d5a943" fill-opacity=".08" stroke="#f1cb70" stroke-width="2"/>
-<rect x="280" y="450" width="390" height="390" fill="url(#unitGrid)"/>
-<text x="475" y="875" text-anchor="middle" class="gold">1,000 mm per side</text>
-<text x="475" y="910" text-anchor="middle" class="body">1,000 × 1,000 units • 1 mm per unit</text>
-<text x="475" y="945" text-anchor="middle" class="body">Area = 1 m²</text>
+<text x="415" y="225" text-anchor="middle" class="head">IMAGE 1 — ORIGINAL GRID</text>
+<text x="1185" y="225" text-anchor="middle" class="head">IMAGE 2 — SINGLE DOT</text>
 
-<!-- After: mathematically true size on same scale, 390px / 1,000,000 -->
-<rect x="1325" y="645" width=".00039" height=".00039" fill="#ffe39a"/>
-<!-- locator only, not representing dimensions -->
-<circle cx="1325" cy="645" r="13" fill="none" stroke="#ffe39a" stroke-width="2"/>
-<path d="M1303 645H1347M1325 623V667" stroke="#ffe39a" stroke-width="1.5"/>
-<text x="1325" y="475" text-anchor="middle" class="gold">At the exact same display scale</text>
-<text x="1325" y="510" text-anchor="middle" class="body">The square is only 0.00039 screen pixels wide.</text>
-<text x="1325" y="545" text-anchor="middle" class="body">It is physically 1,000,000× smaller per side.</text>
-<text x="1325" y="875" text-anchor="middle" class="gold">1,000 nm per side</text>
-<text x="1325" y="910" text-anchor="middle" class="body">1,000 × 1,000 units • 1 nm per unit</text>
-<text x="1325" y="945" text-anchor="middle" class="body">Area = 1 μm²</text>
-<text x="1325" y="700" text-anchor="middle" class="body">Crosshair is a locator only — not the square's size.</text>
+<!-- Exactly 1,000 pattern rows and 1,000 dots per row across the square -->
+<rect x="145" y="285" width="540" height="540" fill="url(#millionDots)"/>
+<rect x="145" y="285" width="540" height="540" fill="none" stroke="#f2ca70" stroke-width="2"/>
 
-<!-- Exact magnified view -->
-<rect x="80" y="1020" width="1640" height="500" rx="22" fill="#0b1625" stroke="#586b84" stroke-width="1.5"/>
-<text x="120" y="1070" class="h">Magnified view of the after-image</text>
-<text x="120" y="1105" class="body">The tiny square above is enlarged here by exactly 1,000,000× in each linear dimension.</text>
-<rect x="180" y="1140" width="390" height="390" fill="#d5a943" fill-opacity=".08" stroke="#f1cb70" stroke-width="2"/>
-<rect x="180" y="1140" width="390" height="390" fill="url(#unitGrid)"/>
-<text x="650" y="1185" class="gold">Enlargement: ×1,000,000</text>
-<text x="650" y="1225" class="body">Displayed square = 390 px here; its actual side is 1 μm.</text>
-<text x="650" y="1265" class="body">The model still contains 1,000 rows × 1,000 columns.</text>
-<text x="650" y="1305" class="body">Each original 1 mm unit becomes a 1 nm unit.</text>
-<text x="650" y="1345" class="body">Grid is schematic; all dimensions follow the same scale factor.</text>
-<text x="1690" y="1570" text-anchor="end" class="body">Geometric model • illustrative rendering, not a fabrication claim</text>
+<circle cx="1185" cy="555" r="7" fill="#ffe39a"/>
+<circle cx="1185" cy="555" r="18" fill="none" stroke="#ffe39a" stroke-width="1.5" opacity=".55"/>
+
+<text x="415" y="900" text-anchor="middle" class="head">1,000 rows × 1,000 dots</text>
+<text x="415" y="935" text-anchor="middle" class="body">1,000,000 dots in total</text>
+<text x="1185" y="900" text-anchor="middle" class="head">1 dot</text>
+<text x="1185" y="935" text-anchor="middle" class="body">Single-dot representation</text>
+
+<rect x="55" y="970" width="1490" height="55" rx="12" fill="#17283d" stroke="#60748c"/>
+<text x="800" y="1005" text-anchor="middle" class="small">Concept illustration of the proposed comparison; the single dot is a representation, not proof that the million data points are physically preserved by uniform scaling.</text>
 </svg>
