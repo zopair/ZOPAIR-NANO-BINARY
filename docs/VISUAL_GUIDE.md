@@ -2,7 +2,7 @@
 
 The diagram below is a teaching aid. Read it from stage 1 to stage 7; each stage adds one idea while keeping the original bitstream unchanged.
 
-![Seven-stage NANO-BINARY concept journey](../assets/nano-binary-journey.svg)
+![Seven-stage NANO-BINARY concept journey](../assets/nano-binary-journey.svg)\n\n## Focused visual — the binary sequence forms the shape of 1\n\n![A binary field becomes the same ordered binary thread shaped as the numeral one](../assets/binary-field-to-one-thread.svg)\n\nThe left panel shows a 16-bit example sequence: `0110100110110010`. The right panel routes those exact same 16 values, in the same order, along one continuous illustrative thread whose overall silhouette resembles the numeral **1**. The values are not replaced by a single `1`; the numeral is only the outer geometric shape made by the path. The example is schematic and does not establish that a physical material can be fabricated or read at a smaller scale.
 
 ## Stage 1 — Begin with the source image
 
