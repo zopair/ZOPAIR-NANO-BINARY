@@ -15,8 +15,10 @@ class GridGeometryTests(unittest.TestCase):
         self.assertEqual(reduced.bit_count, 1_000_000)
         self.assertAlmostEqual(ratios["linear"], 1e-6)
         self.assertAlmostEqual(ratios["area"], 1e-12)
-        self.assertEqual(original.center(999_999), (0.9995, 0.9995))
-        self.assertEqual(reduced.center(999_999), (0.9995e-6, 0.9995e-6))
+        for coordinate in original.center(999_999):
+            self.assertAlmostEqual(coordinate, 0.9995)
+        for coordinate in reduced.center(999_999):
+            self.assertAlmostEqual(coordinate, 0.9995e-6)
 
     def test_topology_cannot_change_during_scale_comparison(self):
         with self.assertRaises(ValueError):
