@@ -4,6 +4,7 @@ from pathlib import Path
 
 from nanobinary.grid import GridGeometry, scale_ratio
 from nanobinary.pgm import read_binary_grid, write_binary_grid
+from nanobinary.poc import structured_fixture
 
 
 class GridGeometryTests(unittest.TestCase):
@@ -26,6 +27,14 @@ class GridGeometryTests(unittest.TestCase):
 
 
 class RasterRoundTripTests(unittest.TestCase):
+    def test_structured_fixture_is_deterministic_and_exact_length(self):
+        first = structured_fixture(20, 40)
+        second = structured_fixture(20, 40)
+        self.assertEqual(first, second)
+        self.assertEqual(len(first), 800)
+        self.assertEqual(set(first), {"0", "1"})
+
+
     def test_binary_grid_round_trip(self):
         bits = "0010111010001110"
         with tempfile.TemporaryDirectory() as directory:
