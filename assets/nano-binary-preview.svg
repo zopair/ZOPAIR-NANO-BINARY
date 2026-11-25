@@ -1,66 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
 <defs>
  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050b14"/><stop offset="1" stop-color="#15263d"/></linearGradient>
  <linearGradient id="gold"><stop stop-color="#d8a83f"/><stop offset="1" stop-color="#ffe7a0"/></linearGradient>
- <pattern id="gridBig" width="62" height="62" patternUnits="userSpaceOnUse"><path d="M62 0H0V62" fill="none" stroke="#e6bd62" stroke-width="1.2"/></pattern>
- <pattern id="gridNano" width=".62" height=".62" patternUnits="userSpaceOnUse"><path d="M.62 0H0V.62" fill="none" stroke="#e6bd62" stroke-width=".12"/></pattern>
+ <pattern id="unitGrid" width=".39" height=".39" patternUnits="userSpaceOnUse"><path d="M.39 0H0V.39" fill="none" stroke="#e6bd62" stroke-width=".035"/></pattern>
  <style>
  .title{font:700 40px Arial,sans-serif;fill:#f7f8fb}.h{font:700 29px Arial,sans-serif;fill:#f7f8fb}
  .sub{font:19px Arial,sans-serif;fill:#c1ccdb}.body{font:16px Arial,sans-serif;fill:#b8c5d6}
  .gold{font:700 26px Arial,sans-serif;fill:#ffe39a}.tag{font:700 16px Arial,sans-serif;fill:#101a29}
- .math{font:700 24px Arial,sans-serif;fill:#ffe39a}
  </style>
 </defs>
-<rect width="1800" height="1180" fill="url(#bg)"/>
-<text x="900" y="65" text-anchor="middle" class="title">NANO-BINARY — TRUE LINEAR SCALE COMPARISON</text>
-<text x="900" y="105" text-anchor="middle" class="sub">Same 1,000 × 1,000-unit image before and after uniform geometric scaling</text>
+<rect width="1800" height="1450" fill="url(#bg)"/>
+<text x="900" y="65" text-anchor="middle" class="title">NANO-BINARY — TRUE SCALE COMPARISON</text>
+<text x="900" y="105" text-anchor="middle" class="sub">One square image • 1,000 × 1,000 units • same complete grid before and after scaling</text>
+<rect x="80" y="140" width="1640" height="120" rx="20" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
+<text x="900" y="190" text-anchor="middle" class="gold" font-size="35">1 m = 1,000,000 μm</text>
+<text x="900" y="230" text-anchor="middle" class="sub">Linear ratio 1 : 1,000,000     •     Area ratio 1 : 1,000,000,000,000</text>
 
-<rect x="80" y="145" width="1640" height="120" rx="20" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
-<text x="900" y="195" text-anchor="middle" class="gold" font-size="34">1 m = 1,000,000 μm</text>
-<text x="900" y="235" text-anchor="middle" class="sub">Linear scale factor = 1 : 1,000,000  •  Area scale factor = 1 : 1,000,000,000,000</text>
+<rect x="80" y="295" width="790" height="690" rx="22" fill="#101e31" stroke="#586b84" stroke-width="2"/>
+<rect x="930" y="295" width="790" height="690" rx="22" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
+<rect x="110" y="320" width="205" height="31" rx="15" fill="url(#gold)"/><text x="212" y="342" text-anchor="middle" class="tag">BEFORE SCALING</text>
+<rect x="960" y="320" width="205" height="31" rx="15" fill="url(#gold)"/><text x="1062" y="342" text-anchor="middle" class="tag">AFTER SCALING</text>
+<text x="475" y="400" text-anchor="middle" class="h">1 m × 1 m</text>
+<text x="1325" y="400" text-anchor="middle" class="h">1 μm × 1 μm</text>
 
-<!-- Side-by-side common-scale comparison -->
-<rect x="80" y="300" width="760" height="650" rx="22" fill="#101e31" stroke="#586b84" stroke-width="2"/>
-<rect x="960" y="300" width="760" height="650" rx="22" fill="#101e31" stroke="#d9b354" stroke-width="2"/>
-<rect x="110" y="325" width="205" height="31" rx="15" fill="url(#gold)"/><text x="212" y="347" text-anchor="middle" class="tag">BEFORE SCALING</text>
-<rect x="990" y="325" width="205" height="31" rx="15" fill="url(#gold)"/><text x="1092" y="347" text-anchor="middle" class="tag">AFTER SCALING</text>
+<!-- Original: a 390px square representing 1m -->
+<rect x="280" y="450" width="390" height="390" fill="#d5a943" fill-opacity=".08" stroke="#f1cb70" stroke-width="2"/>
+<rect x="280" y="450" width="390" height="390" fill="url(#unitGrid)"/>
+<text x="475" y="875" text-anchor="middle" class="gold">1,000 mm per side</text>
+<text x="475" y="910" text-anchor="middle" class="body">1,000 × 1,000 units • 1 mm per unit</text>
+<text x="475" y="945" text-anchor="middle" class="body">Area = 1 m²</text>
 
-<text x="460" y="405" text-anchor="middle" class="h">1 m × 1 m</text>
-<text x="1340" y="405" text-anchor="middle" class="h">1 μm × 1 μm</text>
+<!-- After: mathematically true size on same scale, 390px / 1,000,000 -->
+<rect x="1325" y="645" width=".00039" height=".00039" fill="#ffe39a"/>
+<!-- locator only, not representing dimensions -->
+<circle cx="1325" cy="645" r="13" fill="none" stroke="#ffe39a" stroke-width="2"/>
+<path d="M1303 645H1347M1325 623V667" stroke="#ffe39a" stroke-width="1.5"/>
+<text x="1325" y="475" text-anchor="middle" class="gold">At the exact same display scale</text>
+<text x="1325" y="510" text-anchor="middle" class="body">The square is only 0.00039 screen pixels wide.</text>
+<text x="1325" y="545" text-anchor="middle" class="body">It is physically 1,000,000× smaller per side.</text>
+<text x="1325" y="875" text-anchor="middle" class="gold">1,000 nm per side</text>
+<text x="1325" y="910" text-anchor="middle" class="body">1,000 × 1,000 units • 1 nm per unit</text>
+<text x="1325" y="945" text-anchor="middle" class="body">Area = 1 μm²</text>
+<text x="1325" y="700" text-anchor="middle" class="body">Crosshair is a locator only — not the square's size.</text>
 
-<!-- Large original square, 620 px -->
-<rect x="150" y="445" width="620" height="390" fill="#d5a943" fill-opacity=".06"/>
-<rect x="150" y="445" width="620" height="390" fill="url(#gridBig)" stroke="#f1cb70" stroke-width="2"/>
-<!-- emphasize square dimensions; square is 390x390, use equal physical sides -->
-<rect x="265" y="445" width="390" height="390" fill="#d5a943" fill-opacity=".07" stroke="#f1cb70" stroke-width="2"/>
-<rect x="265" y="445" width="390" height="390" fill="url(#gridBig)"/>
-<text x="460" y="860" text-anchor="middle" class="gold">1,000 mm per side</text>
-<text x="460" y="890" text-anchor="middle" class="body">1,000 × 1,000 units • 1 mm per unit</text>
-
-<!-- right: true-scale nano square at same scale as left 390 px square -->
-<!-- actual displayed size = 390 / 1,000,000 = 0.00039 px -->
-<rect x="1150" y="640" width=".00039" height=".00039" fill="#ffe39a"/>
-<!-- locator crosshair is explicitly not to scale -->
-<circle cx="1150" cy="640" r="13" fill="none" stroke="#ffe39a" stroke-width="2"/>
-<path d="M1128 640H1172M1150 618V662" stroke="#ffe39a" stroke-width="1.5"/>
-<path d="M1165 628L1250 520" fill="none" stroke="#ffe39a" stroke-width="2" stroke-dasharray="6 6"/>
-<text x="1340" y="485" text-anchor="middle" class="gold">Actual-size position on the shared scale</text>
-<text x="1340" y="515" text-anchor="middle" class="body">The 1 μm square is 1,000,000× smaller per side</text>
-<text x="1340" y="545" text-anchor="middle" class="body">It is therefore sub-pixel here — not drawn at an enlarged size.</text>
-<rect x="1245" y="580" width="190" height="120" rx="14" fill="#07111f" stroke="#d9b354" stroke-width="1.5"/>
-<text x="1340" y="615" text-anchor="middle" class="body">Locator only</text>
-<text x="1340" y="647" text-anchor="middle" class="gold">1 μm square</text>
-<text x="1340" y="675" text-anchor="middle" class="body">actual footprint ≈ 0 px</text>
-<text x="1340" y="860" text-anchor="middle" class="gold">1,000 nm per side</text>
-<text x="1340" y="890" text-anchor="middle" class="body">1,000 × 1,000 units • 1 nm per unit</text>
-
-<!-- Enlarged inset: the exact same after-image scaled up 1,000,000x -->
-<rect x="80" y="980" width="1640" height="145" rx="20" fill="#0b1625" stroke="#586b84" stroke-width="1.5"/>
-<text x="115" y="1025" class="h">Nanoscale image — separate magnified view</text>
-<rect x="720" y="1000" width="100" height="100" fill="#d5a943" fill-opacity=".06" stroke="#f1cb70" stroke-width="2"/>
-<rect x="720" y="1000" width="100" height="100" fill="url(#gridNano)"/>
-<text x="860" y="1035" class="gold">Shown enlarged by 1,000,000× for visibility</text>
-<text x="860" y="1070" class="body">Its real side remains 1 μm; its real area remains 1 μm².</text>
-<text x="860" y="1098" class="body">Grid is schematic; the model specifies 1,000 rows × 1,000 columns.</text>
-<text x="1690" y="1158" text-anchor="end" class="body">Geometric model • illustrative rendering, not a fabrication claim</text>
+<!-- Exact magnified view -->
+<rect x="80" y="1020" width="1640" height="360" rx="22" fill="#0b1625" stroke="#586b84" stroke-width="1.5"/>
+<text x="120" y="1070" class="h">Magnified view of the after-image</text>
+<text x="120" y="1105" class="body">The tiny square above is enlarged here by exactly 1,000,000× in each linear dimension.</text>
+<rect x="180" y="1140" width="195" height="195" fill="#d5a943" fill-opacity=".08" stroke="#f1cb70" stroke-width="2"/>
+<rect x="180" y="1140" width="195" height="195" fill="url(#unitGrid)"/>
+<text x="440" y="1185" class="gold">Enlargement: ×1,000,000</text>
+<text x="440" y="1225" class="body">Displayed square = 195 px here; its actual side is 1 μm.</text>
+<text x="440" y="1265" class="body">The model still contains 1,000 rows × 1,000 columns.</text>
+<text x="440" y="1305" class="body">Each original 1 mm unit becomes a 1 nm unit.</text>
+<text x="440" y="1345" class="body">Grid is schematic; all dimensions follow the same scale factor.</text>
+<text x="1690" y="1420" text-anchor="end" class="body">Geometric model • illustrative rendering, not a fabrication claim</text>
 </svg>
