@@ -6,103 +6,101 @@
 
 **A research project investigating whether a fixed binary sequence can be represented in a smaller physical geometry without changing any bit, its order, or its spatial adjacency.**
 
-> This repository currently contains a mathematical model and software validation scaffold. It does not demonstrate a fabricated nanoscale storage medium, a working nanodevice, or a measured density improvement.
-
-## Explainer video
-
-A short concept illustration of the NANO-BINARY idea: a fixed binary sequence whose 0 and 1 symbols and spaces scale together by one common factor, forming one ordered thread shaped as the numeral 1.
-
-https://github.com/user-attachments/assets/aa44f261-b90e-482e-871a-69081821d84e
-
-*Brief concept illustration. It is a visual aid for the research concept, not a validated scientific demonstration or proof of a physical device.*
+> This repository contains mathematical models and a software/print-scan PoC scaffold. It does not demonstrate a fabricated nanoscale storage medium, a working nanodevice, or a measured density improvement.
 
 ## Research question
 
-Can a sequence of binary values be mapped onto a smaller continuous physical path while preserving every original value, exact sequence order, adjacency between consecutive positions, identifiable start/end, and exact reconstruction of the original bitstream?
+Can a sequence of binary values be mapped onto a smaller physical geometry while preserving every original value, exact sequence order, adjacency, identifiable start/end, and exact reconstruction?
 
-The project studies **physical representation and geometry**, not information compression. It does not assume the input bits are random or independent, and it does not remove, merge, reorder, or reinterpret them.
+The project studies physical representation and geometry, not information compression. It does not assume input bits are random or independent, and it does not remove, merge, reorder, or reinterpret them.
 
-## Core model
+## Core invariants
 
-Let B = (b_0, ..., b_(N-1)), where every b_i is 0 or 1. The concept keeps three things explicit and unchanged:
+For \(B=(b_0,\ldots,b_{N-1})\), where each \(b_i\in\{0,1\}\):
 
-- **Symbol identity.** Every value keeps its own symbol: a 0 stays a 0 and a 1 stays a 1. The representation never replaces the values with a new alphabet, and no value is merged into or substituted by another shape.
-- **Spaces as part of the layout.** The spaces between consecutive symbols belong to the sequence layout exactly like the symbols themselves. Symbols and spaces are scaled together by one common factor.
-- **Uniform scaling.** A single positive scale factor s multiplies every coordinate — symbol bodies and inter-symbol spaces alike — reducing the drawing scale of the whole layout toward the target (nano) scale. Nothing is re-proportioned; the same factor applies to every part.
+- The bit count remains exactly \(N\).
+- Every bit retains its value and row-major/index position.
+- Neighbor relationships and the defined grid topology remain unchanged.
+- All geometric dimensions are multiplied by one common positive scale factor.
+- Decoding must recover the exact original sequence: \(D(T(B))=B\).
 
-With an identifiable start point and end point, the ordered sequence of symbols and spaces forms one continuous **thread**. The thread is routed so that its outer contour forms the shape of the numeral **1**. The numeral is the geometry the thread follows — the arrangement of the complete ordered sequence — not an additional bit, and not a replacement of the values by a single 1.
+## Physical Scale Preservation PoC
 
-A representation associates each original index and value with a geometric position. The required software invariant is exact recovery: D(T(B)) = B.
+The first executable PoC renders a binary sequence as a black/white 2-D cell grid in dependency-free PGM format, then reads each cell center back into the original bit order. It includes a million-bit structured test fixture and explicit geometry scaling calculations.
 
-**Current implementation status.** The software prototype stores each bit value with its original index and maps indices to points on a helical path, included as an **illustrative geometry only**. The symbol-shape embodiment and the numeral-1 thread routing described above are the author's concept stages: they are documented and illustrated (see the visual walkthrough) but not yet implemented in code. Existence in a simulation does not prove that matter can be fabricated, distinguished, written, retained, or read at the corresponding scale.
-
-## Visual walkthrough
-
-Follow the concept in seven stages, from the original image through the unchanged bitstream, geometric path, uniform scaling, composite-object concept, and exact reconstruction. The final stage separates software evidence from physical proof requirements.
-
-![Seven-stage NANO-BINARY concept journey](assets/nano-binary-journey.svg)
-
-See the focused illustration: [Binary field → one-shaped thread](assets/binary-field-to-one-thread.svg). It shows a binary field on the left and the same ordered values routed as one continuous thread shaped like the numeral 1 on the right. The numeral is the thread's geometry, not a replacement bit.
-
-Read the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
-
-## Repository map
-
-- docs/RESEARCH_HYPOTHESIS.md — precise scope and terminology.
-- docs/ENGINEERING_MODEL.md — indexed-bit and scaled-path model.
-- docs/VALIDATION_ROADMAP.md — staged evidence plan and failure criteria.
-- src/nanobinary/binary.py — lossless byte/bit conversion.
-- src/nanobinary/geometry.py — deterministic geometry simulation.
-- tests/ — exact-order, byte round-trip, and scaling invariants.
-
-## Quick start
-
-Requires Python 3.10+; no runtime dependencies.
+**Quick start** (Python 3.10+, standard library only):
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-Example:
+Generate a one-million-bit specimen from an input file containing exactly 125,000 bytes:
 
-```python
-from nanobinary.binary import bytes_to_bits, bits_to_bytes
-
-original = bytes([0, 1, 127, 128, 255])
-bits = bytes_to_bits(original)
-assert bits_to_bytes(bits) == original
+```bash
+PYTHONPATH=src python -m nanobinary.poc encode \
+  --input specimen.bin --output specimen.pgm \
+  --rows 1000 --columns 1000 --cell-px 3 --gap-px 2
 ```
 
-The byte conversion preserves all eight bits of every byte, most-significant bit first. It does not compress or reorder data.
+Decode an aligned grayscale PGM scan:
 
-## What this prototype can and cannot establish
+```bash
+PYTHONPATH=src python -m nanobinary.poc decode \
+  --input specimen-scan.pgm --output recovered.bin \
+  --rows 1000 --columns 1000 --cell-px 3 --gap-px 2
+sha256sum specimen.bin recovered.bin
+cmp specimen.bin recovered.bin
+```
 
-**Can establish:** deterministic indexing, preservation of binary values and order in the software model, exact byte/bit round trips, and mathematically consistent coordinate scaling.
+The first decoder requires exact raster dimensions and alignment. It does not perform automatic rotation, perspective correction, grid detection, resampling, or error correction. Full experimental procedure and limitations: [Physical Scale Preservation PoC](docs/PHYSICAL_SCALE_POC.md).
 
-**Cannot establish:** nanoscale manufacturability, physical separation between states, material stability, write/read error rates, energy use, endurance, thermal limits, achievable density, or superiority over existing storage technologies.
+## Existing geometric model
 
-A smaller coordinate model is not, by itself, a smaller realizable storage device. Any physical claim requires a specified material system, state distinction mechanism, fabrication tolerances, read/write method, and measured results.
+The software prototype also maps each bit index to an illustrative helical coordinate. The helix is one candidate path geometry, not a physical device and not a claim that real matter can be resolved at the modeled scale.
+
+## What this work can and cannot establish
+
+**Can establish:** exact byte/bit round trips, invariant bit count and order, deterministic grid mapping, mathematical uniform scaling, raster generation, and software recovery from an aligned raster.
+
+**Can establish after a documented experiment:** macroscopic print/scan recovery and measured physical dimensions.
+
+**Cannot establish yet:** nanoscale manufacturability, material-state separation, physical retention, write/read error rates at nanoscale, energy use, endurance, thermal limits, or superior usable density.
+
+A smaller coordinate model is not, by itself, a smaller realizable storage device. Any nanoscale claim requires a specified material, distinguishable physical states, fabrication tolerances, read/write method, and independently measured results.
+
+## Repository map
+
+- `docs/RESEARCH_HYPOTHESIS.md` — research scope and terminology.
+- `docs/ENGINEERING_MODEL.md` — indexed-bit and scaled-path model.
+- `docs/VALIDATION_ROADMAP.md` — staged evidence plan.
+- `docs/PHYSICAL_SCALE_POC.md` — reproducible render/print/scan/decode procedure.
+- `src/nanobinary/binary.py` — lossless byte/bit conversion.
+- `src/nanobinary/geometry.py` — illustrative helical geometry.
+- `src/nanobinary/grid.py` — uniform 2-D grid geometry.
+- `src/nanobinary/pgm.py` — PGM specimen generation and decoding.
+- `src/nanobinary/poc.py` — command-line PoC.
+- `tests/` — sequence, geometry, and raster recovery tests.
 
 ## Proof of Concept & Enterprise Customization Readiness
 
-**Status:** Early research PoC — software model only. Not production hardware and not a validated storage technology.
+**Status:** Research PoC — software model and macroscopic print/scan procedure; no validated nanoscale hardware.
 
-**Current milestone:** Establish a precise, testable representation model and protect the original sequence invariants before exploring physical feasibility.
+**Milestone 1:** software invariants and exact raster round-trip.  
+**Milestone 2:** reproducible macroscopic physical print/scan with recorded dimensions.  
+**Milestone 3:** candidate material/state mechanism and nanoscale fabrication/readout evidence.
 
-**Next milestones:** compare path geometries and tolerances; define candidate material/state mechanisms from published evidence; quantify read/write error and density; compare against established storage baselines. Each milestone must report assumptions and measured evidence separately.
+Each result must be labeled mathematical, software, macroscopic physical, or nanoscale physical. No milestone is considered complete based on illustrations alone.
 
 ## Open-source and cost policy
 
-The prototype uses the Python standard library and GitHub Actions. No paid APIs, hosted compute, proprietary SDKs, or external runtime services are required.
+Python standard library and GitHub Actions only. No paid APIs, hosted compute, proprietary SDKs, or external runtime services are required.
 
 ## Intellectual Property & Authorship
 
 Copyright (c) 2026 **Aly Hussein Zopair (علي حسين زبير ALY HUSSEIN ZOPAIR)**.
 
-The NANO-BINARY concept, documentation, and this repository's original content are authored by Aly Hussein Zopair and released as open source under the MIT License (see LICENSE). This notice identifies the project author as supplied by the repository owner. It does not assert patentability, novelty, or ownership of third-party scientific methods or prior art.
-
-**Contact:** zopairaly@gmail.com · alyzopairaly@gmail.com
+The NANO-BINARY concept, documentation, and this repository's original content are authored by Aly Hussein Zopair and released under the MIT License (see LICENSE). This notice identifies the project author as supplied by the repository owner. It does not assert patentability, novelty, or ownership of third-party scientific methods or prior art.
 
 ## License
 
-MIT — see LICENSE. Scientific claims, experimental results, and third-party materials must retain their respective attribution and license terms.
+MIT — see LICENSE.
