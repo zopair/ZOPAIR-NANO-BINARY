@@ -8,6 +8,14 @@
 
 > This repository currently contains a mathematical model and software validation scaffold. It does not demonstrate a fabricated nanoscale storage medium, a working nanodevice, or a measured density improvement.
 
+## Explainer video
+
+A short concept illustration of the NANO-BINARY idea: a fixed binary sequence whose 0 and 1 symbols and spaces scale together by one common factor, forming one ordered thread shaped as the numeral 1.
+
+https://github.com/user-attachments/assets/aa44f261-b90e-482e-871a-69081821d84e
+
+*Brief concept illustration. It is a visual aid for the research concept, not a validated scientific demonstration or proof of a physical device.*
+
 ## Research question
 
 Can a sequence of binary values be mapped onto a smaller continuous physical path while preserving every original value, exact sequence order, adjacency between consecutive positions, identifiable start/end, and exact reconstruction of the original bitstream?
