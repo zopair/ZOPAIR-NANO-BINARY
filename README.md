@@ -1,73 +1,88 @@
-
-
-https://github.com/user-attachments/assets/6cde920c-a64c-4eee-b387-ea179320b5f1
-
 # ZOPAIR NANO-BINARY
 
 [![Research status](https://img.shields.io/badge/status-research%20prototype-blue)](docs/RESEARCH_HYPOTHESIS.md)
 [![Tests](https://img.shields.io/badge/tests-Python%20unittest-informational)](tests/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **A research project investigating whether a fixed binary sequence can be represented in a smaller physical geometry without changing any bit, its order, or its spatial adjacency.**
 
-> This repository currently contains a mathematical model and software validation scaffold. It does not demonstrate a fabricated nanoscale storage medium, a working nanodevice, or a measured density improvement.
+> **Research boundary:** This repository contains a mathematical model, deterministic geometry simulation, and software validation scaffold. It does not demonstrate a fabricated nanoscale storage medium, a working nanodevice, or a measured density improvement.
 
-## Explainer video
+## 1. Project Overview & Problem Statement
 
-A short concept illustration of the NANO-BINARY idea: a fixed binary sequence whose 0 and 1 symbols and spaces scale together by one common factor, forming one ordered thread shaped as the numeral 1.
+The research question is whether a finite binary sequence can be mapped onto a smaller continuous physical path while preserving:
 
-https://github.com/user-attachments/assets/aa44f261-b90e-482e-871a-69081821d84e
+- Every original binary value and its index.
+- Exact sequence order and adjacency between consecutive positions.
+- Identifiable start and end points.
+- Exact reconstruction of the original bitstream.
+- A consistent scale factor applied to the complete geometric layout, including inter-symbol spacing.
 
-*Brief concept illustration. It is a visual aid for the research concept, not a validated scientific demonstration or proof of a physical device.*
+This is a study of **physical representation and geometry**, not information compression. The software does not remove, merge, reorder, or reinterpret bits.
 
-## Research question
+### Core concept
 
-Can a sequence of binary values be mapped onto a smaller continuous physical path while preserving every original value, exact sequence order, adjacency between consecutive positions, identifiable start/end, and exact reconstruction of the original bitstream?
+Let (B=(b_0,\ldots,b_{N-1})), where each (b_i\in\{0,1\}). The concept keeps the values and their order unchanged. Symbols and the spaces between them scale together under one common positive factor. The ordered symbols and spaces form a continuous thread between an identifiable start and end; the author's concept routes its outer contour into the shape of the numeral 1. The numeral is the thread's geometry, not an extra bit and not a replacement for the original sequence.
 
-The project studies **physical representation and geometry**, not information compression. It does not assume the input bits are random or independent, and it does not remove, merge, reorder, or reinterpret them.
+**Important implementation distinction:** the current code attaches each bit value to its original index and maps the index to a point on an illustrative helix. The symbol-shape embodiment and numeral-1 thread routing are documented concept stages, not implemented code.
 
-## Core model
+### Current software architecture
 
-Let B = (b_0, ..., b_(N-1)), where every b_i is 0 or 1. The concept keeps three things explicit and unchanged:
+```mermaid
+flowchart TD
+    Input[Original bytes] --> Convert[bytes_to_bits]
+    Convert --> Bits[Ordered 0/1 sequence]
+    Bits --> Geometry[map_to_helix]
+    Geometry --> Points[Indexed HelixPoint records]
+    Points --> Decode[decode_points]
+    Decode --> Recovered[Recovered bit sequence]
+    Recovered --> Check[Exact equality invariant]
+    Check --> Result[Software validation only]
+```
 
-- **Symbol identity.** Every value keeps its own symbol: a 0 stays a 0 and a 1 stays a 1. The representation never replaces the values with a new alphabet, and no value is merged into or substituted by another shape.
-- **Spaces as part of the layout.** The spaces between consecutive symbols belong to the sequence layout exactly like the symbols themselves. Symbols and spaces are scaled together by one common factor.
-- **Uniform scaling.** A single positive scale factor s multiplies every coordinate — symbol bodies and inter-symbol spaces alike — reducing the drawing scale of the whole layout toward the target (nano) scale. Nothing is re-proportioned; the same factor applies to every part.
+The helix is a deterministic geometry model. The decoder reads the stored bit values and indices; it does not infer bits from physical shapes or coordinates.
 
-With an identifiable start point and end point, the ordered sequence of symbols and spaces forms one continuous **thread**. The thread is routed so that its outer contour forms the shape of the numeral **1**. The numeral is the geometry the thread follows — the arrangement of the complete ordered sequence — not an additional bit, and not a replacement of the values by a single 1.
+## 2. Tech Stack & Versions
 
-A representation associates each original index and value with a geometric position. The required software invariant is exact recovery: D(T(B)) = B.
+| Area | Current implementation |
+|---|---|
+| Language | Python 3.10+ |
+| Runtime dependencies | Python standard library only |
+| Binary conversion | `src/nanobinary/binary.py` |
+| Geometry simulation | `src/nanobinary/geometry.py` |
+| Data model | Frozen, slotted `HelixPoint` dataclass |
+| Mathematical functions | Python `math` module |
+| Tests | Python `unittest` |
+| Documentation | Markdown research notes and SVG concept diagrams |
+| License | MIT |
 
-**Current implementation status.** The software prototype stores each bit value with its original index and maps indices to points on a helical path, included as an **illustrative geometry only**. The symbol-shape embodiment and the numeral-1 thread routing described above are the author's concept stages: they are documented and illustrated (see the visual walkthrough) but not yet implemented in code. Existence in a simulation does not prove that matter can be fabricated, distinguished, written, retained, or read at the corresponding scale.
+No third-party Python runtime package is required by the documented quick start.
 
-## Visual walkthrough
+## 3. Prerequisites & Dependencies
 
-Follow the concept in seven stages, from the original image through the unchanged bitstream, geometric path, uniform scaling, composite-object concept, and exact reconstruction. The final stage separates software evidence from physical proof requirements.
+- Python 3.10 or newer.
+- Git.
+- No database, model download, external API, paid service, GPU, or hosted runtime is required.
 
-![Seven-stage NANO-BINARY concept journey](assets/nano-binary-journey.svg)
+The prototype uses only the Python standard library. The repository's MIT license applies to the project code and documentation subject to the license terms; third-party assets and materials retain their own applicable rights.
 
-See the focused illustration: [Binary field → one-shaped thread](assets/binary-field-to-one-thread.svg). It shows a binary field on the left and the same ordered values routed as one continuous thread shaped like the numeral 1 on the right. The numeral is the thread's geometry, not a replacement bit.
+## 4. Installation & Local Setup
 
-Read the detailed explanation: [Visual Guide](docs/VISUAL_GUIDE.md).
+Clone the repository:
 
-## Repository map
+```bash
+git clone https://github.com/zopair/ZOPAIR-NANO-BINARY.git
+cd ZOPAIR-NANO-BINARY
+```
 
-- docs/RESEARCH_HYPOTHESIS.md — precise scope and terminology.
-- docs/ENGINEERING_MODEL.md — indexed-bit and scaled-path model.
-- docs/VALIDATION_ROADMAP.md — staged evidence plan and failure criteria.
-- src/nanobinary/binary.py — lossless byte/bit conversion.
-- src/nanobinary/geometry.py — deterministic geometry simulation.
-- tests/ — exact-order, byte round-trip, and scaling invariants.
-
-## Quick start
-
-Requires Python 3.10+; no runtime dependencies.
+Run the test suite:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-Example:
+Run a small byte/bit round-trip example:
 
 ```python
 from nanobinary.binary import bytes_to_bits, bits_to_bytes
@@ -77,36 +92,146 @@ bits = bytes_to_bits(original)
 assert bits_to_bytes(bits) == original
 ```
 
-The byte conversion preserves all eight bits of every byte, most-significant bit first. It does not compress or reorder data.
+To use the geometry model:
 
-## What this prototype can and cannot establish
+```python
+from nanobinary.binary import bytes_to_bits
+from nanobinary.geometry import map_to_helix, decode_points
 
-**Can establish:** deterministic indexing, preservation of binary values and order in the software model, exact byte/bit round trips, and mathematically consistent coordinate scaling.
+bits = bytes_to_bits(b"nano")
+points = map_to_helix(bits, radius=1.0, pitch=0.25, scale=0.5)
+assert decode_points(points) == bits
+```
 
-**Cannot establish:** nanoscale manufacturability, physical separation between states, material stability, write/read error rates, energy use, endurance, thermal limits, achievable density, or superiority over existing storage technologies.
+The example demonstrates exact software recovery only. It does not represent a fabricated or physically readable storage device.
+
+## 5. Environment Variables
+
+No environment variables, API keys, credentials, or external service configuration are required by the current Python prototype.
+
+The documented test and example commands run locally and do not contact external services.
+
+## 6. Usage Guide & Core Features
+
+### Lossless byte/bit conversion
+
+`bytes_to_bits(data)`:
+- Requires a Python `bytes` value.
+- Expands each byte into eight bits, most-significant bit first.
+- Preserves the original byte order.
+
+`bits_to_bytes(bits)`:
+- Accepts only a string containing `0` and `1`.
+- Rejects bit strings whose length is not divisible by eight.
+- Reconstructs the original bytes in order.
+
+No compression or reordering is performed.
+
+### Deterministic geometry simulation
+
+`map_to_helix(bits, radius, pitch, scale, turns_per_bit)`:
+- Validates the binary sequence and requires positive geometry parameters.
+- Creates one `HelixPoint` for each original bit index.
+- Keeps the bit and original index attached to each point.
+- Applies the same scale factor to all generated coordinates.
+
+`decode_points(points)`:
+- Requires indices to be contiguous and ordered from zero.
+- Rejects malformed bit values or out-of-order indices.
+- Recovers the sequence from the stored bit fields.
+
+The software invariant is:
+
+`decode_points(map_to_helix(B)) == B`
+
+### Research documentation and visual material
+
+- [Research hypothesis and boundaries](docs/RESEARCH_HYPOTHESIS.md)
+- [Engineering model](docs/ENGINEERING_MODEL.md)
+- [Validation roadmap](docs/VALIDATION_ROADMAP.md)
+- [Visual guide](docs/VISUAL_GUIDE.md)
+- [Seven-stage concept illustration](assets/nano-binary-journey.svg)
+- [Binary field to one-shaped thread](assets/binary-field-to-one-thread.svg)
+
+### Explainer video
+
+The repository includes a short concept illustration:
+
+https://github.com/user-attachments/assets/aa44f261-b90e-482e-871a-69081821d84e
+
+The video is an explanatory visual, not scientific evidence or a demonstration of physical storage.
+
+## 7. Live Demo & Screenshots
+
+There is no hosted interactive application or physical device demo. The repository provides static SVG illustrations and the concept video linked above.
+
+The visual walkthrough presents the research concept from the original bitstream through geometric arrangement and scaling to the distinction between software evidence and physical proof requirements. These assets explain the hypothesis; they do not validate nanoscale fabrication or read/write behavior.
+
+## 8. Testing & Verification
+
+Run:
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+The software validation scope covers the repository's stated invariants, including:
+- Byte-to-bit and bit-to-byte round trips.
+- Preservation of bit values and original sequence order.
+- Deterministic index-to-coordinate mapping.
+- Uniform coordinate scaling.
+- Rejection of malformed bit strings and invalid or non-contiguous indexed points.
+
+The test suite verifies software behavior only. No physical experiment, material characterization, fabrication tolerance, read/write error-rate measurement, or storage-density benchmark is included in this repository.
+
+## What This Prototype Can and Cannot Establish
+
+**Can establish**
+- Deterministic indexing of binary values.
+- Preservation of bit identity and order in the software model.
+- Exact byte/bit round trips.
+- Mathematically consistent coordinate scaling.
+
+**Cannot establish**
+- Nanoscale manufacturability or material stability.
+- Physical separation and reliable distinction between adjacent states.
+- A real write/read mechanism or its error rate.
+- Energy use, endurance, thermal limits, or achievable storage density.
+- Superiority over existing storage technologies.
 
 A smaller coordinate model is not, by itself, a smaller realizable storage device. Any physical claim requires a specified material system, state distinction mechanism, fabrication tolerances, read/write method, and measured results.
 
 ## Proof of Concept & Enterprise Customization Readiness
 
-**Status:** Early research PoC — software model only. Not production hardware and not a validated storage technology.
+**Status: Early research PoC — software model only. Not production hardware and not a validated storage technology.**
 
-**Current milestone:** Establish a precise, testable representation model and protect the original sequence invariants before exploring physical feasibility.
+**Current milestone:** establish a precise, testable representation model and protect the original sequence invariants before exploring physical feasibility.
 
-**Next milestones:** compare path geometries and tolerances; define candidate material/state mechanisms from published evidence; quantify read/write error and density; compare against established storage baselines. Each milestone must report assumptions and measured evidence separately.
+| Area | Current state |
+|---|---|
+| Binary conversion | Implemented |
+| Indexed geometric simulation | Implemented as an illustrative helix |
+| Exact software decoding | Implemented from stored bit/index records |
+| Symbol-shaped physical states | Concept only; not implemented |
+| Numeral-1 thread routing | Concept and visual documentation; not implemented in code |
+| Fabrication and read/write mechanism | Not specified or demonstrated |
+| Physical density measurements | None |
+| Production deployment | Not applicable to this research scaffold |
 
-## Open-source and cost policy
+### Research roadmap
 
-The prototype uses the Python standard library and GitHub Actions. No paid APIs, hosted compute, proprietary SDKs, or external runtime services are required.
+Future work may compare straight, planar serpentine, helical, and other continuous path geometries. A credible physical evaluation must define minimum feature size, nearest-neighbor distance, curvature, tolerances, boundary conditions, readout accessibility, and measured error rates. A compact bounding box alone is not a sufficient storage-density metric.
+
+### Change log
+
+- **2026-11-26:** Reorganized the README into the eight-section technical guide, clarified implemented software versus concept-only stages, and documented setup, usage, verification, limitations, and authorship. No source code or research claims were changed.
+
+## Open-source and Cost Policy
+
+The current prototype uses the Python standard library and requires no paid APIs, hosted compute, proprietary SDKs, or external runtime services.
 
 ## Intellectual Property & Authorship
 
 Copyright (c) 2026 **Aly Hussein Zopair (علي حسين زبير ALY HUSSEIN ZOPAIR)**.
 
-The NANO-BINARY concept, documentation, and this repository's original content are authored by Aly Hussein Zopair and released as open source under the MIT License (see LICENSE). This notice identifies the project author as supplied by the repository owner. It does not assert patentability, novelty, or ownership of third-party scientific methods or prior art.
-
-**Contact:** zopairaly@gmail.com · alyzopairaly@gmail.com
-
-## License
-
-MIT — see LICENSE. Scientific claims, experimental results, and third-party materials must retain their respective attribution and license terms.
+The NANO-BINARY concept, research framing, documentation, and original repository content are attributed to Aly Hussein Zopair as stated by the repository owner. This notice does not assert patentability, novelty, or ownership of third-party scientific methods or prior art. The project code and documentation are released under the MIT License; see [LICENSE](LICENSE).
